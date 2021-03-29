@@ -144,7 +144,7 @@ p{ /* The words and spacing between groups of text */
 .parallax {
   -webkit-perspective: 100px;
           perspective: 100px;
-    height: 85vw;    /* The size/length of the Parallax window ITSELF, including where the town/border will end, as in how far up/down it will go */
+    height: 70vw;    /* The size/length of the Parallax window ITSELF, including where the town/border will end, as in how far up/down it will go */
     overflow-x:hidden;
     overflow-y: auto; 
     position: absolute;
@@ -184,7 +184,7 @@ p{ /* The words and spacing between groups of text */
 .parallax__layer__2 {
   -webkit-transform: translateZ(-200px) scale(3.1);
           transform: translateZ(-200px) scale(3.1);
-    margin-top: -40%;
+    margin-top: -60%;
     margin-left: 13%;
   
 }
@@ -202,7 +202,7 @@ p{ /* The words and spacing between groups of text */
   -webkit-transform: translateZ(-125px) scale(2);
           transform: translateZ(-125px) scale(2);
         margin-left: 15%;
-        margin-top: -5%;
+        margin-top: -70%;
 
 }
 
@@ -217,7 +217,7 @@ p{ /* The words and spacing between groups of text */
   -webkit-transform: translateZ(0px) scale(1);
           transform: translateZ(0px) scale(1);
     margin-left: 0%;
-    margin-top: 200%; /* moves the PARALLAX PHOTO UP, for the intro to slide in underneath */
+    margin-top: 270%; /* moves the PARALLAX PHOTO UP, for the intro to slide in underneath */
     font-size: 2vw;
 }
 
@@ -256,7 +256,7 @@ p{ /* The words and spacing between groups of text */
 .introductionDivWords {
     position: absolute;
     left: 10%;
-    margin-top: -115%; /* moves the red box of into words up and down */
+    margin-top: -135%; /* moves the red box of into words up and down */
     width: 40%;
     line-height: 3vw;
 -webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
