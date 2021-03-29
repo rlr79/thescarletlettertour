@@ -1,34 +1,52 @@
-* {
-  box-sizing: border-box;
-}
 
 body {
-    height: 500px;
+    height: 50%;
     width: 100%;
     background: #202030;
     background-image: url(sectionPhotos/BostonMap.jpg);
     overflow-x: hidden;
+    color: #fff;
 }
 
-/* stagnant title ***********************/
+
+p{ /* The words and spacing between groups of text */
+    margin-top: 1vw;
+    font-size: 1.3vw;
+    text-indent: 30px;
+    font-family: 'Roboto Slab', serif;
+    line-height: 2vw;
+}
 
 
-
+/* stagnant title, aithor, and publication information ***********************/
 
 
 .title {
     position: absolute;
     top: 90px;
     left: 61%;
-  perspective: 400;
-  padding-left: 17px;
-  font-family: 'Ribeye Marrow', cursive;
-  font-weight: bold;
+    perspective: 400;
+    padding-left: 17px;
+    font-family: 'Ribeye Marrow', cursive;
+    font-weight: bold;
     font-size: 8vw;
-  color: #e84545;
-        letter-spacing: .5vw;
-    
+    color: #e84545;
+    letter-spacing: .5vw;
 }
+
+.author {
+    font-size: 2.5vw;
+    font-family: 'Special Elite', cursive;
+    margin-top: 10%;
+    color: #903749;
+}
+
+
+
+/* Title animation */
+
+
+/* the red line before the title *********/
 .title:before {
   content: '';
   display: block;
@@ -43,6 +61,8 @@ body {
   -webkit-animation: title-border-slide-in 0.35s ease-out forwards;
           animation: title-border-slide-in 0.35s ease-out forwards;
 }
+
+/* title animation *********/
 .title .title-word {
   opacity: 0;
   transform-origin: bottom center;
@@ -104,99 +124,54 @@ body {
     opacity: 1;
   }
 }
-.author {
-    font-size: 2.5vw;
-    font-family: 'Special Elite', cursive;
-    margin-top: 10%;
-    color: #903749;
-}
 
 
-/*
-#title span {
-  background: -webkit-linear-gradient(white, #7692af);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-} */
-
-
-/* parallax intro paragraph ***********************/
-
-
-
-
-.introductionDivWords {
-        position: absolute;
-    left: 12%;
-    margin-top: -115%;
-    width: 40%;
-    line-height: 3vw;
-box-shadow: 0px 0px 400px -29px rgba(0,0,0,1);
--webkit-box-shadow: 0px 0px 400px -29px rgba(0,0,0,1);
--moz-box-shadow: 0px 0px 400px -29px rgba(0,0,0,1);
-    padding: 3vw;
-    background-image: url(sectionPhotos/redFabric.jpg);
-
-}
-.introduction {
-    text-indent: 30px;
-    font-size: 1.5vw;
-    text-align: justify;
-    font-family: 'Special Elite', cursive;
+.contact { /* The fixed admin@thegreatgatsbytour.com contact information !!!!!!!!!!!!!!!!!!!!!! */
+    font-size: 1.1vw;
+    font-weight: 250;
+    letter-spacing: .1vw;
+    position: fixed;
+    margin-left: 25%;
+    bottom: 3vw;
 }
 
 
 
 
-/* parallax ***********************/
+
+/* parallax ********************************************************************/
 
 .parallax {
   -webkit-perspective: 100px;
           perspective: 100px;
-  height: 875px;
-  overflow-x:hidden;
-  overflow-y: auto; 
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 0;
-  margin-left: -1500px;
-  margin-bottom: 0px;
-    
+    height: 85vw;    /* The size/length of the Parallax window ITSELF, including where the town/border will end, as in how far up/down it will go */
+    overflow-x:hidden;
+    overflow-y: auto; 
+    position: absolute;
+    width: 100%;
+  /*  border-bottom: 1vw solid #1a1a1a; */
 }
 
-.parallax__layer {
-    /*
-position: absolute;
-        top: 50%;
-left: 50%;
-        transform: translate(-50%, -50%);
-    */
-}
-.parallax__layer img {
-  display: block;
-  position: absolute;
-  bottom: 0;
-    
+
+
+.parallax__layer img {    /* Keeps everything level horizontally */
+    display: block;
+    position: absolute;
+     bottom: 0;
 }
 
-.parallax__cover {
-  background: #000000;
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 100%; /*What moves the cover from visible to not*/
-  left: 0;
-  right: 0;
-  height: 1100px;  /* what pushes down the top banner */
-  padding-left: 50%;
+
+
+.parallaxWiden {
+    width: 100vw;
 }
+
 
 .parallax__layer__0 {
   -webkit-transform: translateZ(-300px) scale(4);
           transform: translateZ(-300px) scale(4);
     width: 3000px;
-    height: 1000px;
+    height: 200vw;
     margin-left: 58%;
     
 }
@@ -204,21 +179,20 @@ left: 50%;
 .parallax__layer__1 {
   -webkit-transform: translateZ(-250px) scale(3.5);
           transform: translateZ(-250px) scale(3.5);
-    margin-left: 165%;
 }
 
 .parallax__layer__2 {
   -webkit-transform: translateZ(-200px) scale(3.1);
           transform: translateZ(-200px) scale(3.1);
-    margin-top: 40%;
-    margin-left: 73%;
+    margin-top: -40%;
+    margin-left: 13%;
   
 }
 
 .parallax__layer__3 {
   -webkit-transform: translateZ(-150px) scale(2.5);
           transform: translateZ(-150px) scale(2.5);
-        margin-left: 69%;
+        margin-left: 10.5%;
         margin-top: 0%;
 
 
@@ -227,7 +201,7 @@ left: 50%;
 .parallax__layer__4 {
   -webkit-transform: translateZ(-125px) scale(2);
           transform: translateZ(-125px) scale(2);
-        margin-left: 70%;
+        margin-left: 15%;
         margin-top: -5%;
 
 }
@@ -242,610 +216,429 @@ left: 50%;
 .parallax__layer__6 {
   -webkit-transform: translateZ(0px) scale(1);
           transform: translateZ(0px) scale(1);
-    margin-left: 42%;
-    margin-top: 160%; /* moves the parallax photo up, for the into to slide in */
+    margin-left: 0%;
+    margin-top: 200%; /* moves the PARALLAX PHOTO UP, for the intro to slide in underneath */
     font-size: 2vw;
+}
+
+
+
+
+
+
+
+.parallax__cover {
+    background: #000000;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 80vw;  /* what pushes down the top banner */
+    top: 100%; /*What moves the cover from visible to not, and seperates it from the city divider*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* parallax intro paragraph *******************************************************/
+
+
+
+.introductionDivWords {
+    position: absolute;
+    left: 10%;
+    margin-top: -115%; /* moves the red box of into words up and down */
+    width: 40%;
+    line-height: 3vw;
+-webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
+box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
+-moz-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
+    padding: 3vw;
+    background-image: url(sectionPhotos/redFabric.jpg);
+    max-width: 65vw;
+    max-height: 70vw;
+}
+
+
+
+
+.introduction {
+    text-indent: 30px;
+    font-size: 1.5vw;
+    text-align: justify;
+    font-family: 'Special Elite', cursive;
+    color: #fff;
 }
 
 .Boston {
     position: absolute;
-    margin-top: -40%;
-    margin-left: 23%;
+    margin-top: -48%;
+    margin-left: 20%;
+    font-family: 'Special Elite', cursive;
 }
 
 .setIn{
-    margin-left: -22%;
-    margin-bottom: -13%;
-    
+    margin-left: -25%;
+    margin-bottom: -6%;
+    font-size: 2.4vw;
+    font-family: 'Special Elite', cursive;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Title Banners*******************************/
-
-.titleBanners{
-    background-color: #010101;
-    border-top: 10px solid #000000;
-    border-bottom: 10px solid #000000;
-    filter: brightness(.9);
-}
-
-
-.titleBannerContents {
-    margin-left: 18%;
-    padding: 14%;
-}
-
-.titleBannerCity{
-    font-size: 60px;
-    font-family: 'Homenaje', sans-serif;
-    /*font-family: 'Courier Prime', monospace;*/
-    margin-top: -10%;
-}
-
-.titleBannerCityPart{
-    font-size: 30px;
-    margin-top: -30px;
-}
-
-#titleBanner1 {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 120%;
-}
-
-#titleBanner1b {
-
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-
-#titleBanner1c {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-
-#titleBanner1d {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-
-#titleBanner2 {
-
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-#titleBanner2b {
-  width: 1400px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 200%;
-}
-
-#titleBanner3 {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 125%;
-}
-
-#titleBanner4 {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-#titleBanner5 {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 180%;
-}
-
-#titleBanner6 {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-#titleBanner7 {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 125%;
-}
-
-#titleBanner8 {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 150%;
-}
-
-#titleBanner9 {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 135%;
-}
-
-#titleBanner9b {
-  width: 1400px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 120%;
-}
-
-#titleBanner9c {
-  width: 1400px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-#titleBanner10 {
-  background-repeat: no-repeat;
-  background-size: 150% 210%;
-}
-
-
-
-
-
-
-/* Sections ****************************/
-
-
-#section1 {
-    background-image: url('sectionPhotos/deco8.jpg');
-    background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#section2 {
-    background-image: url('sectionPhotos/deco9.jpg');
-    background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#section3 {
-    background-image: url('sectionPhotos/deco10.jpg');
-    background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#section4 {
-    background-image: url('sectionPhotos/deco5.jpg');
-    background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#section5 {
-    background-image: url('sectionPhotos/deco4.jpg');
-    background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#section6 {
-    background-image: url('sectionPhotos/deco3.jpg');
-    background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#section7 {
-    background-image: url('sectionPhotos/deco8.jpg');
-    background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#section8 {
-    background-image: url('sectionPhotos/deco9.jpg');
-    background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-#section9 {
-    background-image: url('sectionPhotos/deco10.jpg');
-    background-attachment: fixed;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-
-
-
-
-.wrapper {
-  min-height: 100vh;
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
-  color: #fff;
-  position: relative;   
-}
-
-section {
-  height: 100%;
-  font-size: 40px;
-  font-weight: 100;
-  width: 100%;
-  background-color: #010101;
-
-}
-
-.sections{
-    display: inline-block;
-    margin-top: 56%;
-    width: 100%;
-}
-
-.grouping {
-/* border: 5px solid red; */
-    width: 1000px;
-    top: 50%;
-    padding-bottom: 5%;
-    margin-top: 16%;
-    margin-bottom: 14%;
-    margin-left: 18%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.map {
-    border: 2px solid black;
-    align-self: center;
-/* border: 5px solid cyan; */
-    z-index: 1;
--webkit-box-shadow: -1px 1px 50px 10px rgba(0,0,0,0.75); 
-box-shadow: -1px 1px 50px 10px rgba(0,0,0,0.75);
-}
-
-.wordBox {
-    align-self: center;
-    background-color: #212121;
-    max-height: 460px;
-    overflow-y: auto;  
-    font-size: 20px;
-     text-align: justify;
-    border: 3px solid black;
-    width: 35%;
-    float: right;
-    margin-left: 5%;
-    margin-right: 8%; /* moves word box groups from the right */
-    padding: 2%;
-    
--webkit-box-shadow: -1px 1px 50px 10px rgba(0,0,0,0.9); 
-box-shadow: -1px 1px 50px 10px rgba(0,0,0,.95);
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-}
- 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    border-radius: 10px;
-}
- 
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-
-
-.scrollDownWords{
-    margin-top: 2%;
-    font-size: 20px;
-    text-shadow: -1px -1px 18px rgba(255,255,255,1);
-    color: goldenrod;
-}
-
-p{
+.scrollDown {
     margin-top: 8%;
-    text-indent: 30px;
-    font-size: 16px;
+    color: #e84545;
+    font-weight: 500;
 }
 
-.cite {
-    font-style: italic;
-}
 
-.cite2 {
-    font-style: italic;
-    color: palegreen;
-}
 
-.wordBoxParagraph{
-    margin-top: 2%;
-}
 
-.smallDate {
-    display: inline-block;
-    font-size: 17px;
-    margin-left: 4%;
+
+
+
+
+
+
+
+
+/* Smaller Screens ********************************/
+@media screen and (max-width: 700px) {
     
+    .frame {
+        visibility: hidden;
+        height: 105vw;
+        width: 70vw;
 }
-
-.step {
-/* font-weight: bold; */
-    font-size: 30px;
-    margin-left: 10px;
     
-}
-
-/* The Final Tour Step, Above the glowing paragraph *************/ 
-.finalGrouping {
-  max-height: 460px;
-  overflow-y: auto;  
-  top: 50%;
-  margin-top: 16%;
-  margin-bottom: 2%;
-  margin-right: -5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-
-
-.finalWordBox {
-    align-self: center;
-    background-color: #212121;
-    max-height: 460px;
-    overflow-y: auto;  
-    font-size: 20px;
-    border: 3px solid black;
-    width: 400px;
-    float: right;
-    margin-left: 5%;
-    margin-right: 15%;
-    padding: 2%;
--webkit-box-shadow: -1px 1px 50px 10px rgba(0,0,0,0.9); 
-box-shadow: -1px 1px 50px 10px rgba(0,0,0,0.9);
-}
-
-
-
-
-
-
-
-
-
-
-/* Navigation ********************/
-
-.nav__wrapper {
-    z-index: 1;
-  position: fixed;
-    left: 0%;
-    margin-top: 10%;
-  height: 100%;
-  padding: 30px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column nowrap;
-  -webkit-box-pack: end;
-          justify-content: flex-end;
-}
-.nav {
-  margin: 0 0 100px 30px;
-}
-.nav__counter {
-  font-size: 24px;
-  -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-.nav__counter__chapter {
-  font-size: 32px;
-  font-weight: 300;
-  margin-top: 1px;
-  width: 10px;
-  height: 0px;
-  overflow: hidden;
-  opacity: 0;
-  -webkit-transition: height 0.3s ease-out, opacity 0.2s ease-out;
-  transition: height 0.3s ease-out, opacity 0.2s ease-out;
-}
-.nav__title {
-  font-size: 32px;
-  font-weight: 300;
-  margin-top: 1px;
-  width: 10px;
-  height: 0px;
-  overflow: hidden;
-  opacity: 0;
-  -webkit-transition: height 0.3s ease-out, opacity 0.2s ease-out;
-  transition: height 0.3s ease-out, opacity 0.2s ease-out;
-}
-.nav__body {
-  font-weight: 100;
-  font-size: 18px;
-  font-size: 18px;
-  width: 130px;
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  -webkit-transition: height 0.3s ease-out, opacity 0.2s ease-out;
-  transition: height 0.3s ease-out, opacity 0.2s ease-out;
-}
-.nav li {
-  position: relative;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  margin-bottom: 1em;
-}
-.nav li:after {
-  content: '';
-  display: block;
-  border-left: 2px solid white;
-  border-top: 2px solid white;
-  height: 150px;
-  width: 20px;
-  position: absolute;
-  left: -30px;
-  top: 15px;
-}
-.nav li a {
-  display: block;
-  padding: 0;
-  color: #fff;
-  -webkit-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-.nav li a:hover {
-  background-color: transparent;
-  padding-left: 1em;
-}
-.nav li a:focus {
-  background-color: transparent;
-}
-.nav li.active {
-  pointer-events: none;
-  padding-left: 1em;
-}
-.nav li.active:after {
-  width: 35px;
-  height: 300px;
-  top: 35px;
-}
-.nav li.active .nav__counter {
-  font-size: 40px;
+    .introduction {
+        font-size: 2.9vw;
+        line-height: 4.5vw;
+    }
+    .introductionDivWords {
+        left: 0%;   
+        top: 10%;
+        max-width: 80%;
+        max-height: 70%;
+    }
+    .locationsWords {
+        margin-top: 10%;
+        font-size: 5vw;
+    }
+    .card-body-locations {
+        width: 120%;
+        margin-left: -8%;
+    }
     
+
+    
+    .titleBannerCityPart{
+        font-size: 3vw;
+        margin-top: -20px;
+        font-weight: 400;
 }
-
-.nav li.active .nav__counter__chapter {
-    font-size: 20px; 
-    font-weight: bold;
-    width: 150px;
-margin-bottom: 15px;
-    margin-left: 0px;
-  opacity: 1;
-  overflow: visible;
+    
+    .smallDate {
+        font-size: 2.5vw; 
 }
-.nav li.active .nav__title {
-    width: 150px;
-    margin-left: 35px;
-  opacity: 1;
-  overflow: visible;
-    font-size: 20px;
+    .step {
+        font-size: 3.5vw;
+    }
+    p {
+        font-size: 2.1vw;
+    }
+    .map {
+        max-width: 40vw;
+        max-height: 50vw;
 }
-
-
-.nav li.active .nav__body {
-  margin-left: 16px;
-  opacity: 1;
-  overflow: visible;
-    font-size: 18px;
+    .wordBox {
+        max-height: 70vw;
+        max-width: 40vw;
+    }
+    
+    .finalWordBox {
+        max-height: 70vw;
+        max-width: 40vw;
 }
+    .scrollWordsText {
+        font-size: 2.5vw;
+        letter-spacing: .1vw;
+    }
+    .container {
+        margin-top: -5%;
+        margin-left: 10%;
+        margin-bottom: 5%;
+    }
 
+    .nav li.active .nav__counter__chapter {
+        font-size: 2.5vw;  /* "chapter" word size, clicked on */
 
-
-
-
-
-
-/* The End Glowing Box *********************/
-
-body {
-  /*margin: 0; */
 }
-
-.theEnd{
-    font-size: 30px;
-    text-align: center;
+    .contact {
+        font-size: 1.5vw;
+        font-weight: 200;
+        letter-spacing: .1vw;
+        margin-left: 20%;
+        bottom: 5vw;
 }
-
-.container {
-  display: grid;
-  place-items: center;
-  height: 90vh;
-}
-
-.card {
-  position: relative;
-  display: grid;
-  place-items: center;
-  background-color: #18181b;
-}
-
-.card-body {
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  width: 650px;
-  height: 325px;
-  background-color: #18181b;
-    padding-left: 50px;
-    padding-right: 50px;
-    text-indent: 30px;
-    font-family: monospace;
-    text-align: justify;
-}
-
-.card-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-   width: 650px;
-  height: 325px;
-  background-color: #5dfa9e;
-    opacity: .5;
-  filter: blur(24px);
-  z-index: 1;
-  animation: glowingShadow 2.3s ease infinite alternate;
-}
-
-.theEndText {
-  font-size: 48px;
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.theEndText.text-glow {
-  background-color: #08cf2d;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowingText 2.3s infinite alternate;
-}
-
-@keyframes glowingShadow {
+    
+    @keyframes glowingShadow { /* final green glow */
   from {
-    transform: scale(1.2);
+    transform: scale(1.7);
   }
 
   to {
     transform: scale(0.65);
   }
 }
+    
+    
+    @keyframes glow {
 
-@keyframes glowingText {
-  from {
-    opacity: 1;
+  16.5% {
+
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
   }
+  33.3% {
+    left: 113px;
+    width: 3px;
+    background-color: #51e831;
+    box-shadow: 0px 0px 15px 20px #d5ffcc;
+  }
+  50% {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+  }
+  66.6% {
+    left: 109px;
+    width: 0px;
 
-  to {
-    opacity: 0;
   }
 }
+    
+    /* stars ****/
+    #layers .layer {
+	height: 53vw;   /* changes the height/size of the stars */
+	width: 200vw;
+}
+    
+    .parallax {
+    height: 145vw;    /* The size/length of the Parallax window */
+
+}
+    
+    
+    .sections{
+    margin-top: 145vw; /* How far the Parallax Window is from where SECTIONS begin - this moves the sections up and down */
+}
+    
+    #title {
+    margin-top: 25vw;
+}
+    
+    .fireflies {
+        margin-bottom: -25vw;
+}
+
+.firefly {
+
+  width: 1vw;
+  height: 1vw;
+  margin: -0.2vw 0 0 9.8vw;
+  animation: ease 1000s alternate infinite;
+  pointer-events: none;
+}
+
+    .fireflies {
+  position: relative;
+  height: 10vh;
+  width: 100%;
+}
+    .parallax__layer__3 {  /* Lighthouse */
+    margin-left: 22%; 
+    margin-top: -88%;
+}
+
+.parallax__layer__4 { /* Water */
+        margin-top: 65%;
+
+    }
+    
+    .parallax__layer__5 { /* Pier */
+    margin-top: 44%;
+    margin-left: -9%;
+    }
+    .parallax__layer__6 { /* Grass */
+    margin-top: 50%;
+}
+    
+    .parallax__cover {
+    margin-top: 30%;
+ height: 175vw;
+}
+    
+    .introductionDivFrame {
+    top: 10vw;
+    }
+    
+.nav li.active .nav__title {
+    width: 4vw; /* chapter detail paragraph widths when clicked on */
+    margin-left: 3.5vw;
+    font-size: 2.5vw;
+    letter-spacing: .1vw;
+    font-weight: 500;
+}
+    
+    .nav__wrapper {
+   /*  top: 25%; */
+}
+    
+    #titleBanner1 {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-size: 100% 120%;
+}
+    #titleBanner1b {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-size: 100% 101%;
+}
+    
+    #titleBanner1c {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    filter: brightness(95%);
+}
+
+    #titleBanner1d {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-size: 100% 130%;
+}
+    
+    #titleBanner2 {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-size: 120% 170%;
+}
+    
+    #titleBanner2b {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-size: 100% 120%;
+}
+    
+    #titleBanner3 {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-size: 100% 120%;
+}
+    #titleBanner4 {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+}
+    #titleBanner5 {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+}
+    
+    #titleBanner6 {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-size: 100% 120%;
+}
+    
+    #titleBanner7 {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-size: 100% 130%;
+}
+    #titleBanner8 {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+}
+    
+    #titleBanner9 {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+}
+    
+    #titleBanner9b {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-size: 110% 105%;
+}
+    
+    #titleBanner9c {
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+}
+    
+    
+    .card-body-scroll {
+    margin-bottom: 3%;
+}
+    
+    
+    
+    .button {
+    margin-top: 20%; /* moves the PDF pamphet button up and down */
+  letter-spacing: 0.075em;
+  font-size: .75em;
+  box-shadow: inset 0 0 0 1px #FDFDFD;
+
+}
+    
+    .main {
+margin-top: 25%;
+    margin-left: 6%;
+}
+    
+    .button:hover .button__label, .button:focus .button__label {
+  color: #000;
+  background-color: rgba(200, 200, 200, 0.8);
+}
+    
+    .button__label {
+
+  padding: .5em 1em;
+
+}
+    
+.container {
+    height: 80vh; /* area all around the box */
+}
+    
+    .card-body {
+    width: 60vw;
+    height: 96vw;
+}
+
+.card-glow {
+    width: 60vw;
+    height: 76vw;
+}
+
+.theEndText { /* all the paragraphs and words */
+    font-size: 3.5vw;
+    line-height: 6vw;
+    padding: 7%;
+}
+
+.theEnd{ /* the literal words */
+    margin-top: 8%;
+    font-size: 5.5vw;
+}
+
+    
+}
+
+
+
