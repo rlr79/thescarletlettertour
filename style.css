@@ -251,36 +251,69 @@ a {
     border-bottom: .2vw solid white;
 }
 
+.highlight1 {
+    display: inline-block;
+    text-indent: -5px;
+}
 
-.introductionParagraph1 .highlight {
+.highlight1 .highlight {
   text-decoration: none;
   position: relative;
   z-index: 0;
 }
 
-.introductionParagraph1 .highlight::after {
+.highlight1 .highlight::after {
   position: absolute;
   z-index: -1;
-  bottom: -.2vw;
+  bottom: .1vw;
   left: 50%;
   transform: translateX(-50%);
   content: "";
   width: 80%;
   height: 0vw;
-  background-color: #010101;
+  background-color: #202020;
   transition: all 250ms;
 }
-.introductionParagraph1 .highlight:hover {
+.highlight1 .highlight:hover {
   color: white;
   text-shadow: 0px 1px 0px black;
 }
-.introductionParagraph1 .highlight:hover::after {
+.highlight1 .highlight:hover::after {
   height: 150%;
-  width: 125%;
+  width: 110%;
 }
 
+.highlight2 {
+    display: inline-block;
+    
+}
 
+.highlight2 .highlight {
+  text-decoration: none;
+  position: relative;
+  z-index: 0;
+}
 
+.highlight2 .highlight::after {
+  position: absolute;
+  z-index: -1;
+  bottom: .1vw;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 80%;
+  height: 0vw;
+  background-color: #202020;
+  transition: all 250ms;
+}
+.highlight2 .highlight:hover {
+  color: white;
+  text-shadow: 0px 1px 0px black;
+}
+.highlight2 .highlight:hover::after {
+  height: 150%;
+  width: 115%;
+}
 
 
 
