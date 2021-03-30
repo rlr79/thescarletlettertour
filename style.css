@@ -17,11 +17,6 @@ p{ /* The words and spacing between groups of text */
     line-height: 2vw;
 }
 
-a {
-    color: #010101;
-    font-size: 2.2vw;
-    border-bottom: 4px solid black;
-}
 
 /* stagnant title, aithor, and publication information ***********************/
 
@@ -166,18 +161,9 @@ a {
 }
 
 
-
-.parallaxWiden {
-    width: 100vw;
-}
-
-
 .parallax__layer__0 {
   -webkit-transform: translateZ(-300px) scale(4);
           transform: translateZ(-300px) scale(4);
-    width: 3000px;
-    height: 200vw;
-    margin-left: 58%;
     
 }
 
@@ -189,7 +175,7 @@ a {
 .parallax__layer__2 {
   -webkit-transform: translateZ(-200px) scale(3.1);
           transform: translateZ(-200px) scale(3.1);
-    margin-top: -60%;
+    margin-top: 150%;
     margin-left: 13%;
   
 }
@@ -207,29 +193,23 @@ a {
   -webkit-transform: translateZ(-125px) scale(2);
           transform: translateZ(-125px) scale(2);
         margin-left: 15%;
-        margin-top: -70%;
+        margin-top: -10%;
 
 }
 
 .parallax__layer__5 {
   -webkit-transform: translateZ(-50px) scale(1.5);
           transform: translateZ(-50px) scale(1.5);
-    margin-left: 69%;
-    margin-top: 0%;
+    margin-left: 10%;
+    margin-top: 250%;
 }
 
 .parallax__layer__6 {
   -webkit-transform: translateZ(0px) scale(1);
           transform: translateZ(0px) scale(1);
     margin-left: 0%;
-    margin-top: 270%; /* moves the PARALLAX PHOTO UP, for the intro to slide in underneath */
-    font-size: 2vw;
+    margin-top: 180%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
 }
-
-
-
-
-
 
 
 .parallax__cover {
@@ -247,47 +227,64 @@ a {
 
 
 
-
-
-
-
-
-
-
 /* parallax intro paragraph *******************************************************/
 
 
-
-.introductionDivWords {
+.introductionParagraph1 {
+    margin-top: 300% /* moves the red box of into words up and down */
     position: absolute;
-    left: 10%;
-    margin-top: -135%; /* moves the red box of into words up and down */
-    width: 40%;
+    width: 40vw;
+    height: 46vw;
     line-height: 3vw;
 -webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
 box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
 -moz-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
     padding: 3vw;
     background-image: url(sectionPhotos/redFabric.jpg);
-    max-width: 65vw;
-    max-height: 50vw;
     overflow-y: auto;  
 }
 
+a {
+    color: #040404;
+    font-size: 1.7vw;
+    border-bottom: 4px solid black;
+}
 
+.introductionParagraph2 {
+    margin-top:  -130%;
+    margin-left: 10%;
+    position: absolute;
+    width: 40vw;
+    height: 50vw;
+    line-height: 3vw;
+-webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
+box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
+-moz-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
+    padding: 3vw;
+    background-image: url(sectionPhotos/redFabric.jpg);
+    overflow-y: auto;  
+}
 
+.paragraph2Title {
+        font-family: 'Special Elite', cursive;
+        color: #fff;
+        margin-bottom: 2vw;
+        font-size: 2vw;
+    text-align: center;
+}
 
-.introduction {
+.introductionWords {
     text-indent: 30px;
     font-size: 1.5vw;
     text-align: justify;
     font-family: 'Special Elite', cursive;
     color: #fff;
+    margin-bottom: 1vw
 }
 
 .Boston {
     position: absolute;
-    margin-top: -48%;
+    margin-top: -38%;
     margin-left: 20%;
     font-family: 'Special Elite', cursive;
 }
