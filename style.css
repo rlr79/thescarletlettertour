@@ -1,718 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>The Scarlett Letter</title>
 
-body {
-    height: 50%;
-    width: 100%;
-    background: #202030;
-    background-image: url(sectionPhotos/BostonMap.jpg);
-    overflow-x: hidden;
-    color: #fff;
-}
-
-
-p{ /* The words and spacing between groups of text */
-    margin-top: 1vw;
-    font-size: 1.3vw;
-    text-indent: 30px;
-    font-family: 'Roboto Slab', serif;
-    line-height: 2vw;
-}
-
-
-/* stagnant title, aithor, and publication information ***********************/
-
-
-.title {
-    position: absolute;
-    top: 90px;
-    left: 61%;
-    perspective: 400;
-    padding-left: 17px;
-    font-family: 'Ribeye Marrow', cursive;
-    font-weight: bold;
-    font-size: 8vw;
-    color: #e84545;
-    letter-spacing: .5vw;
-}
-
-.author {
-    font-size: 2.5vw;
-    font-family: 'Special Elite', cursive;
-    margin-top: 10%;
-    color: #903749;
-}
-
-
-
-/* Title animation */
-
-
-/* the red line before the title *********/
-.title:before {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 56%;
-  width: .4vw;
-  background: #903749;
-  top: 5%;
-  left: 0;
-  opacity: 1;
-  transform: translateX(-150px);
-  -webkit-animation: title-border-slide-in 0.35s ease-out forwards;
-          animation: title-border-slide-in 0.35s ease-out forwards;
-}
-
-/* title animation *********/
-.title .title-word {
-  opacity: 0;
-  transform-origin: bottom center;
-  transform: rotateX(-90deg);
-}
-.title .title-word:nth-child(1) {
-  -webkit-animation: roll-in 0.15s 0s ease-out forwards;
-          animation: roll-in 0.15s 0s ease-out forwards;
-}
-.title .title-word:nth-child(2) {
-  -webkit-animation: roll-in 0.15s 0.175s ease-out forwards;
-          animation: roll-in 0.15s 0.175s ease-out forwards;
-}
-.title .title-word:nth-child(3) {
-  -webkit-animation: roll-in 0.15s 0.35s ease-out forwards;
-          animation: roll-in 0.15s 0.35s ease-out forwards;
-}
-.title .title-word:nth-child(4) {
-  -webkit-animation: roll-in 0.15s 0.525s ease-out forwards;
-          animation: roll-in 0.15s 0.525s ease-out forwards;
-}
-@-webkit-keyframes title-border-slide-in {
-  0% {
-    transform: translateX(-150px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes title-border-slide-in {
-  0% {
-    transform: translateX(-150px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes roll-in {
-  0% {
-    transform: rotateX(-90deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateX(0deg);
-    opacity: 1;
-  }
-}
-@keyframes roll-in {
-  0% {
-    transform: rotateX(-90deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateX(0deg);
-    opacity: 1;
-  }
-}
-
-
-.contact { /* The fixed admin@thegreatgatsbytour.com contact information !!!!!!!!!!!!!!!!!!!!!! */
-    font-size: 1.1vw;
-    font-weight: 250;
-    letter-spacing: .1vw;
-    position: fixed;
-    margin-left: 25%;
-    bottom: 3vw;
-}
-
-
-
-
-
-/* parallax ********************************************************************/
-
-.parallax {
-  -webkit-perspective: 100px;
-          perspective: 100px;
-    height: 70vw;    /* The size/length of the Parallax window ITSELF, including where the town/border will end, as in how far up/down it will go */
-    overflow-x:hidden;
-    overflow-y: auto; 
-    position: absolute;
-    width: 100%;
-  /*  border-bottom: 1vw solid #1a1a1a; */
-}
-
-
-
-.parallax__layer img {    /* Keeps everything level horizontally */
-    display: block;
-    position: absolute;
-     bottom: 0;
-}
-
-
-.parallax__layer__0 {
-  -webkit-transform: translateZ(-300px) scale(4);
-          transform: translateZ(-300px) scale(4);
-    
-}
-
-.parallax__layer__1 {
-  -webkit-transform: translateZ(-250px) scale(3.5);
-          transform: translateZ(-250px) scale(3.5);
-}
-
-.parallax__layer__2 {
-  -webkit-transform: translateZ(-200px) scale(3.1);
-          transform: translateZ(-200px) scale(3.1);
-    margin-top: 150%;
-    margin-left: 13%;
-  
-}
-
-.parallax__layer__3 {
-  -webkit-transform: translateZ(-150px) scale(2.5);
-          transform: translateZ(-150px) scale(2.5);
-        margin-left: 10.5%;
-        margin-top: 0%;
-
-
-}
-
-.parallax__layer__4 {
-  -webkit-transform: translateZ(-125px) scale(2);
-          transform: translateZ(-125px) scale(2);
-        margin-left: 15%;
-        margin-top: -10%;
-
-}
-
-.parallax__layer__5 {
-  -webkit-transform: translateZ(-50px) scale(1.5);
-          transform: translateZ(-50px) scale(1.5);
-    margin-left: 10%;
-    margin-top: 250%;
-}
-
-.parallax__layer__6 {
-  -webkit-transform: translateZ(0px) scale(1);
-          transform: translateZ(0px) scale(1);
-    margin-left: 0%;
-    margin-top: 180%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
-}
-
-
-.parallax__cover {
-    background: #000000;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 80vw;  /* what pushes down the top banner */
-    top: 100%; /*What moves the cover from visible to not, and seperates it from the city divider*/
-}
-
-
-
-
-
-
-
-/* parallax intro paragraph *******************************************************/
-
-
-.introductionParagraph1 {
-    margin-top: 300% /* moves the red box of into words up and down */
-    position: absolute;
-    width: 40vw;
-    height: 46vw;
-    line-height: 3vw;
--webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
--moz-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
-    padding: 3vw;
-    background-image: url(sectionPhotos/redFabric.jpg);
-    overflow-y: auto;  
-}
-
-a {
-    color: #fff;
-    font-size: 1.7vw;
-    text-decoration: none;
-    border-bottom: .2vw solid white;
-}
-
-.highlight1 {
-    display: inline-block;
-    text-indent: -5px;
-}
-
-.highlight1 .highlight {
-  text-decoration: none;
-  position: relative;
-  z-index: 0;
-}
-
-.highlight1 .highlight::after {
-  position: absolute;
-  z-index: -1;
-  bottom: .1vw;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  width: 80%;
-  height: 0vw;
-  background-color: #202020;
-  transition: all 250ms;
-}
-.highlight1 .highlight:hover {
-  color: white;
-  text-shadow: 0px 1px 0px black;
-}
-.highlight1 .highlight:hover::after {
-  height: 150%;
-  width: 110%;
-}
-
-.highlight2 {
-    display: inline-block;
-    
-}
-
-.highlight2 .highlight {
-  text-decoration: none;
-  position: relative;
-  z-index: 0;
-}
-
-.highlight2 .highlight::after {
-  position: absolute;
-  z-index: -1;
-  bottom: .1vw;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  width: 80%;
-  height: 0vw;
-  background-color: #202020;
-  transition: all 250ms;
-}
-.highlight2 .highlight:hover {
-  color: white;
-  text-shadow: 0px 1px 0px black;
-}
-.highlight2 .highlight:hover::after {
-  height: 150%;
-  width: 115%;
-}
-
-
-
-
-
-.introductionParagraph2 {
-    margin-top:  -130%;
-    margin-left: 10%;
-    position: absolute;
-    width: 40vw;
-    height: 50vw;
-    line-height: 3vw;
--webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
--moz-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
-    padding: 3vw;
-    background-image: url(sectionPhotos/redFabric.jpg);
-    overflow-y: auto;  
-}
-
-.paragraph2Title {
-        font-family: 'Special Elite', cursive;
-        color: #fff;
-        margin-bottom: 2vw;
-        font-size: 2vw;
-    text-align: center;
-}
-
-.introductionWords {
-    text-indent: 30px;
-    font-size: 1.5vw;
-    text-align: justify;
-    font-family: 'Special Elite', cursive;
-    color: #fff;
-    margin-bottom: 1vw
-}
-
-.settingSection { 
-    position: absolute;
-    margin-top: -43%;
-    margin-left: 20%;
-    font-family: 'Special Elite', cursive;
-    font-size: 1.7vw;
-}
-
-.setting{
-    margin-left: -25%;
-    margin-bottom: -1%;
-    font-size: 2.4vw;
-    font-family: 'Special Elite', cursive;
-}
-
-.scrollDown {
-    margin-top: 4%;
-    color: #e84545;
-    font-weight: 500;
-    font-size: 1.9vw;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Smaller Screens ********************************/
-@media screen and (max-width: 700px) {
-    
-    .frame {
-        visibility: hidden;
-        height: 105vw;
-        width: 70vw;
-}
-    
-    .introduction {
-        font-size: 2.9vw;
-        line-height: 4.5vw;
-    }
-    .introductionDivWords {
-        left: 0%;   
-        top: 10%;
-        max-width: 80%;
-        max-height: 70%;
-    }
-    .locationsWords {
-        margin-top: 10%;
-        font-size: 5vw;
-    }
-    .card-body-locations {
-        width: 120%;
-        margin-left: -8%;
-    }
-    
 
     
-    .titleBannerCityPart{
-        font-size: 3vw;
-        margin-top: -20px;
-        font-weight: 400;
-}
+<link rel="stylesheet" href="./style.css">
     
-    .smallDate {
-        font-size: 2.5vw; 
-}
-    .step {
-        font-size: 3.5vw;
-    }
-    p {
-        font-size: 2.1vw;
-    }
-    .map {
-        max-width: 40vw;
-        max-height: 50vw;
-}
-    .wordBox {
-        max-height: 70vw;
-        max-width: 40vw;
-    }
     
-    .finalWordBox {
-        max-height: 70vw;
-        max-width: 40vw;
-}
-    .scrollWordsText {
-        font-size: 2.5vw;
-        letter-spacing: .1vw;
-    }
-    .container {
-        margin-top: -5%;
-        margin-left: 10%;
-        margin-bottom: 5%;
-    }
+    <!-- The Scarlet Letter font -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap" rel="stylesheet"> 
+    
+    <!-- Author/Introduction font (typewriter/printing press font) -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
+    
+<!-- Body text -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'><link rel="stylesheet" href="./style.css">
 
-    .nav li.active .nav__counter__chapter {
-        font-size: 2.5vw;  /* "chapter" word size, clicked on */
 
-}
-    .contact {
-        font-size: 1.5vw;
-        font-weight: 200;
-        letter-spacing: .1vw;
-        margin-left: 20%;
-        bottom: 5vw;
-}
-    
-    @keyframes glowingShadow { /* final green glow */
-  from {
-    transform: scale(1.7);
-  }
 
-  to {
-    transform: scale(0.65);
-  }
-}
-    
-    
-    @keyframes glow {
 
-  16.5% {
+</head>
 
-    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
-  }
-  33.3% {
-    left: 113px;
-    width: 3px;
-    background-color: #51e831;
-    box-shadow: 0px 0px 15px 20px #d5ffcc;
-  }
-  50% {
-    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
-  }
-  66.6% {
-    left: 109px;
-    width: 0px;
-
-  }
-}
-    
-    /* stars ****/
-    #layers .layer {
-	height: 53vw;   /* changes the height/size of the stars */
-	width: 200vw;
-}
-    
-    .parallax {
-    height: 145vw;    /* The size/length of the Parallax window */
-
-}
-    
-    
-    .sections{
-    margin-top: 145vw; /* How far the Parallax Window is from where SECTIONS begin - this moves the sections up and down */
-}
-    
-    #title {
-    margin-top: 25vw;
-}
-    
-    .fireflies {
-        margin-bottom: -25vw;
-}
-
-.firefly {
-
-  width: 1vw;
-  height: 1vw;
-  margin: -0.2vw 0 0 9.8vw;
-  animation: ease 1000s alternate infinite;
-  pointer-events: none;
-}
-
-    .fireflies {
-  position: relative;
-  height: 10vh;
-  width: 100%;
-}
-    .parallax__layer__3 {  /* Lighthouse */
-    margin-left: 22%; 
-    margin-top: -88%;
-}
-
-.parallax__layer__4 { /* Water */
-        margin-top: 65%;
-
-    }
-    
-    .parallax__layer__5 { /* Pier */
-    margin-top: 44%;
-    margin-left: -9%;
-    }
-    .parallax__layer__6 { /* Grass */
-    margin-top: 50%;
-}
-    
-    .parallax__cover {
-    margin-top: 30%;
- height: 175vw;
-}
-    
-    .introductionDivFrame {
-    top: 10vw;
-    }
-    
-.nav li.active .nav__title {
-    width: 4vw; /* chapter detail paragraph widths when clicked on */
-    margin-left: 3.5vw;
-    font-size: 2.5vw;
-    letter-spacing: .1vw;
-    font-weight: 500;
-}
-    
-    .nav__wrapper {
-   /*  top: 25%; */
-}
-    
-    #titleBanner1 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 120%;
-}
-    #titleBanner1b {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 101%;
-}
-    
-    #titleBanner1c {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    filter: brightness(95%);
-}
-
-    #titleBanner1d {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 130%;
-}
-    
-    #titleBanner2 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 120% 170%;
-}
-    
-    #titleBanner2b {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 120%;
-}
-    
-    #titleBanner3 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 120%;
-}
-    #titleBanner4 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    #titleBanner5 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    
-    #titleBanner6 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 120%;
-}
-    
-    #titleBanner7 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 130%;
-}
-    #titleBanner8 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    
-    #titleBanner9 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    
-    #titleBanner9b {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 110% 105%;
-}
-    
-    #titleBanner9c {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    
-    
-    .card-body-scroll {
-    margin-bottom: 3%;
-}
     
     
     
-    .button {
-    margin-top: 20%; /* moves the PDF pamphet button up and down */
-  letter-spacing: 0.075em;
-  font-size: .75em;
-  box-shadow: inset 0 0 0 1px #FDFDFD;
-
-}
+ <body>
     
-    .main {
-margin-top: 25%;
-    margin-left: 6%;
-}
+        
+    <div class="title">
+      <div class="title-word">The</div>
+      <div class="title-word">Scarlet</div>
+      <div class="title-word">Letter</div>
+            <div class = 'author'>
+                <br>
+                by Nathaniel Hawthorne
+                <br><br>
+                published 1850 C.E.
+                
+            </div>
+    </div>
     
-    .button:hover .button__label, .button:focus .button__label {
-  color: #000;
-  background-color: rgba(200, 200, 200, 0.8);
-}
     
-    .button__label {
-
-  padding: .5em 1em;
-
-}
+<!-- parallax header -->
+<div class="parallax">
+    <div class="parallax__layer parallax__layer__0">
+    </div>
     
-.container {
-    height: 80vh; /* area all around the box */
-}
+    <div class="parallax__layer parallax__layer__1">
+    </div>
     
-    .card-body {
-    width: 60vw;
-    height: 96vw;
-}
-
-.card-glow {
-    width: 60vw;
-    height: 76vw;
-}
-
-.theEndText { /* all the paragraphs and words */
-    font-size: 3.5vw;
-    line-height: 6vw;
-    padding: 7%;
-}
-
-.theEnd{ /* the literal words */
-    margin-top: 8%;
-    font-size: 5.5vw;
-}
-
+    <div class="parallax__layer parallax__layer__2">
+    <img src="HeaderPhotos/Fullbackground.png" width="550" />
+    </div>
     
-}
+    <div class="parallax__layer parallax__layer__3">
+    <img src="HeaderPhotos/Scaffolding.png" width="567" />
+    </div>
+    
+    <div class="parallax__layer parallax__layer__4">
+    <img src="HeaderPhotos/Group.png" width="525" />
+    </div>
+    
+    <div class="parallax__layer parallax__layer__5">
+        
+                    <div class = "introductionParagraph1">
+
+                <div class = "introductionWords">
+               20 years after the Mayflower landed, the Puritans collectively inhabited what is now called Boston, Massachusetts.</div>
+                
+                <div class = "introductionWords">This is the setting for The Scarlet Letter - a story which was heavily influenced by the author's own upbringing in New England, and his family's ties to early-Colonial Puritans.</div>
+                
+                <div class = "introductionWords"><div class=highlight1><a class="highlight" href="https://historyofmassachusetts.org/john-hathorne-the-salem-witch-judge/">William Hathorne</a></div> , Nathaniel's great-great-great grandfather, was a Puritan who immigrated from Europe to Massachusets in the 1630s, and his great-great grandfather, <div class=highlight2><a class="highlight" href="https://historyofmassachusetts.org/john-hathorne-the-salem-witch-judge/">John Hathorne</a></div> , remorselessly participated as a judge in the Salem Witch Trials, and was known for administering cruely harsh judgements to Essex County residents and Quakers
+                </div>
+            </div>
+    </div>
+    
+    <div class="parallax__layer parallax__layer__6">
 
 
+            <div class = "introductionParagraph2">
+                <div class = "paragraph2Title">Who were the Puritans?</div>
 
+                <div class = "introductionWords">For more than a millennium, Catholicism maintained its position as a major religion throughout Europe. However, in 1517, Martin Luther nailed a list of objections to Catholic beliefs on a church door in Germany, officially showing the rise of Protestants.</div>
+
+                <div class = "introductionWords">Protestantism was a new branch of Christianity, which sought to separate itself from Catholicism and practice Christian beliefs in its own way. Its philosophies spread quickly, along with a decimating intolerance from all sides – such as King Henry VIII (1491-1547), who cruely persecuted Catholic followers, followed by Queen Mary I (1516-1558), his daughter, who then persecuted Protestants so terribly that she earned the nickname Bloody Mary.</div>
+
+                <div class = "introductionWords">As Protestants grew, so did the Puritans – who believed that Protestantism was too lenient.</div>
+
+                <div class = "introductionWords">Facing persecution in Europe, hundreds of Puritans left to establish new communities in Massachusetts Bay Colony (1630), and a separate sect went to begin Plymouth Colony (1620) - whose settlers barely survived upon arrival, and were taught to adapt by the Natives who welcomed them.</div>
+
+                <div class = "introductionWords">Both colonies were governed by orthodox religious principles, with rigid laws and severe punishments. Also - similar to other religious Europeans of the time - Puritan leaders were intolerant of religious differences or diversity, and became cruel and unjust to the Native communities that once saved their first Colonial settlers.</div>
+
+                <div class = "introductionWords">A core belief - which was central to Puritan society - was the idea that all people were pre-ordained for salvation or damnation before their birth. Thus, everyone was believed to either be immanently wicked and destined for damnation, or pre-destined for salvation by living in Puritan Grace. With this view, all committed sins were seen as a reflection someone's destiny for damnation, and sins were considered both irreversible and unforgivable.</div>
+
+                <div class = "introductionWords">This belief heavily dictates the interactions which occur within The Scarlet Letter.</div>
+            </div>           
+
+        
+        <div class = settingSection>
+            <div class = setting>SETTING:</div><br>
+            Boston, Massachusetts<br>
+            1649 - 1649 C.E
+            <div class = scrollDown>Scroll Down to Explore the Novel</div>
+        </div>
+
+         <img src="HeaderPhotos/Salem.png" width="103%" /> 
+        
+    </div>
+</div>
+    
+    
+    <!--The Black Cover for additional buttons/paragraphs ---------------->
+<div class="parallax__cover"></div>
+
+
+      
+
+
+<script  src="./script.js"></script>
+
+</body>
+</html>
