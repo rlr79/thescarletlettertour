@@ -18,7 +18,9 @@ p{ /* The words and spacing between groups of text */
 }
 
 
-/* stagnant title, aithor, and publication information ***********************/
+
+
+/* stagnant title, author, and publication information ***********************/
 
 
 .title {
@@ -126,15 +128,6 @@ p{ /* The words and spacing between groups of text */
 }
 
 
-.contact { /* The fixed admin@thegreatgatsbytour.com contact information !!!!!!!!!!!!!!!!!!!!!! */
-    font-size: 1.1vw;
-    font-weight: 250;
-    letter-spacing: .1vw;
-    position: fixed;
-    margin-left: 25%;
-    bottom: 3vw;
-}
-
 
 
 
@@ -211,15 +204,6 @@ p{ /* The words and spacing between groups of text */
     margin-top: 180%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
 }
 
-
-.parallax__cover {
-    background: #000000;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 80vw;  /* what pushes down the top banner */
-    top: 100%; /*What moves the cover from visible to not, and seperates it from the city divider*/
-}
 
 
 
@@ -351,6 +335,11 @@ box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
     margin-bottom: 1vw
 }
 
+
+
+
+/* Setting Words ******************/ 
+
 .settingSection { 
     position: absolute;
     margin-top: -43%;
@@ -374,10 +363,29 @@ box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
 }
 
 
+/* Parallax Cover *******************/
+
+.parallax__cover {
+    background: #000000;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 80vw;  /* what pushes down the top banner */
+    top: 100%; /*What moves the cover from visible to not, and seperates it from the city divider*/
+}
 
 
 
 
+
+.contact { /* The email contact information */
+    font-size: 1.1vw;
+    font-weight: 250;
+    letter-spacing: .1vw;
+    position: fixed;
+    margin-left: 25%;
+    bottom: 3vw;
+}
 
 
 
@@ -393,323 +401,6 @@ box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
         width: 70vw;
 }
     
-    .introduction {
-        font-size: 2.9vw;
-        line-height: 4.5vw;
-    }
-    .introductionDivWords {
-        left: 0%;   
-        top: 10%;
-        max-width: 80%;
-        max-height: 70%;
-    }
-    .locationsWords {
-        margin-top: 10%;
-        font-size: 5vw;
-    }
-    .card-body-locations {
-        width: 120%;
-        margin-left: -8%;
-    }
-    
-
-    
-    .titleBannerCityPart{
-        font-size: 3vw;
-        margin-top: -20px;
-        font-weight: 400;
-}
-    
-    .smallDate {
-        font-size: 2.5vw; 
-}
-    .step {
-        font-size: 3.5vw;
-    }
-    p {
-        font-size: 2.1vw;
-    }
-    .map {
-        max-width: 40vw;
-        max-height: 50vw;
-}
-    .wordBox {
-        max-height: 70vw;
-        max-width: 40vw;
-    }
-    
-    .finalWordBox {
-        max-height: 70vw;
-        max-width: 40vw;
-}
-    .scrollWordsText {
-        font-size: 2.5vw;
-        letter-spacing: .1vw;
-    }
-    .container {
-        margin-top: -5%;
-        margin-left: 10%;
-        margin-bottom: 5%;
-    }
-
-    .nav li.active .nav__counter__chapter {
-        font-size: 2.5vw;  /* "chapter" word size, clicked on */
-
-}
-    .contact {
-        font-size: 1.5vw;
-        font-weight: 200;
-        letter-spacing: .1vw;
-        margin-left: 20%;
-        bottom: 5vw;
-}
-    
-    @keyframes glowingShadow { /* final green glow */
-  from {
-    transform: scale(1.7);
-  }
-
-  to {
-    transform: scale(0.65);
-  }
-}
-    
-    
-    @keyframes glow {
-
-  16.5% {
-
-    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
-  }
-  33.3% {
-    left: 113px;
-    width: 3px;
-    background-color: #51e831;
-    box-shadow: 0px 0px 15px 20px #d5ffcc;
-  }
-  50% {
-    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
-  }
-  66.6% {
-    left: 109px;
-    width: 0px;
-
-  }
-}
-    
-    /* stars ****/
-    #layers .layer {
-	height: 53vw;   /* changes the height/size of the stars */
-	width: 200vw;
-}
-    
-    .parallax {
-    height: 145vw;    /* The size/length of the Parallax window */
-
-}
-    
-    
-    .sections{
-    margin-top: 145vw; /* How far the Parallax Window is from where SECTIONS begin - this moves the sections up and down */
-}
-    
-    #title {
-    margin-top: 25vw;
-}
-    
-    .fireflies {
-        margin-bottom: -25vw;
-}
-
-.firefly {
-
-  width: 1vw;
-  height: 1vw;
-  margin: -0.2vw 0 0 9.8vw;
-  animation: ease 1000s alternate infinite;
-  pointer-events: none;
-}
-
-    .fireflies {
-  position: relative;
-  height: 10vh;
-  width: 100%;
-}
-    .parallax__layer__3 {  /* Lighthouse */
-    margin-left: 22%; 
-    margin-top: -88%;
-}
-
-.parallax__layer__4 { /* Water */
-        margin-top: 65%;
-
-    }
-    
-    .parallax__layer__5 { /* Pier */
-    margin-top: 44%;
-    margin-left: -9%;
-    }
-    .parallax__layer__6 { /* Grass */
-    margin-top: 50%;
-}
-    
-    .parallax__cover {
-    margin-top: 30%;
- height: 175vw;
-}
-    
-    .introductionDivFrame {
-    top: 10vw;
-    }
-    
-.nav li.active .nav__title {
-    width: 4vw; /* chapter detail paragraph widths when clicked on */
-    margin-left: 3.5vw;
-    font-size: 2.5vw;
-    letter-spacing: .1vw;
-    font-weight: 500;
-}
-    
-    .nav__wrapper {
-   /*  top: 25%; */
-}
-    
-    #titleBanner1 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 120%;
-}
-    #titleBanner1b {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 101%;
-}
-    
-    #titleBanner1c {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    filter: brightness(95%);
-}
-
-    #titleBanner1d {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 130%;
-}
-    
-    #titleBanner2 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 120% 170%;
-}
-    
-    #titleBanner2b {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 120%;
-}
-    
-    #titleBanner3 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 120%;
-}
-    #titleBanner4 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    #titleBanner5 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    
-    #titleBanner6 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 120%;
-}
-    
-    #titleBanner7 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 100% 130%;
-}
-    #titleBanner8 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    
-    #titleBanner9 {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    
-    #titleBanner9b {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    background-size: 110% 105%;
-}
-    
-    #titleBanner9c {
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-}
-    
-    
-    .card-body-scroll {
-    margin-bottom: 3%;
-}
-    
-    
-    
-    .button {
-    margin-top: 20%; /* moves the PDF pamphet button up and down */
-  letter-spacing: 0.075em;
-  font-size: .75em;
-  box-shadow: inset 0 0 0 1px #FDFDFD;
-
-}
-    
-    .main {
-margin-top: 25%;
-    margin-left: 6%;
-}
-    
-    .button:hover .button__label, .button:focus .button__label {
-  color: #000;
-  background-color: rgba(200, 200, 200, 0.8);
-}
-    
-    .button__label {
-
-  padding: .5em 1em;
-
-}
-    
-.container {
-    height: 80vh; /* area all around the box */
-}
-    
-    .card-body {
-    width: 60vw;
-    height: 96vw;
-}
-
-.card-glow {
-    width: 60vw;
-    height: 76vw;
-}
-
-.theEndText { /* all the paragraphs and words */
-    font-size: 3.5vw;
-    line-height: 6vw;
-    padding: 7%;
-}
-
-.theEnd{ /* the literal words */
-    margin-top: 8%;
-    font-size: 5.5vw;
-}
 
     
 }
