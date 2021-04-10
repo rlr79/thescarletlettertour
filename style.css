@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap"); /* The Scarlett Letter font */
-@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"); /* Author font */
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"); /* Author/Introduction (typewriter/printing press) font */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"); /* Paragraph font */
+
 
 body {
     height: 50%;
@@ -32,7 +33,6 @@ p{ /* The words and spacing between groups of text */
     left: 61%;
     perspective: 400;
     padding-left: 17px;
-    font-family: 'Ribeye Marrow', cursive;
     font-weight: bold;
     font-size: 8vw;
     color: #e84545;
@@ -69,6 +69,7 @@ p{ /* The words and spacing between groups of text */
 
 /* title animation *********/
 .title .title-word {
+  font-family: 'Ribeye Marrow', cursive;
   opacity: 0;
   transform-origin: bottom center;
   transform: rotateX(-90deg);
