@@ -232,7 +232,7 @@ margin-left: 8%;
     margin-top: 300% /* moves the red box of into words up and down */
     position: absolute;
     width: 40vw;
-    height: 43vw;
+    height: 40vw;
     line-height: 3vw;
 -webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
 box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
@@ -248,7 +248,7 @@ a {
     border-bottom: .2vw solid white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.8vw;
+    font-size: 1.55vw;
 }
 
 a.shadow:hover {
@@ -276,7 +276,7 @@ a.shadow:hover {
     margin-left: 10%;
     position: absolute;
     width: 40vw;
-    height: 43vw;
+    height: 40vw;
     line-height: 3vw;
 -webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
 box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
