@@ -242,13 +242,44 @@ box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
     overflow-y: auto;  
 }
 
+
+
+
+
+/* The Scarlet Letter glowing words animation *************************************************/
+
+
+
+.titleGlow {
+    animation: glow 15s infinite alternate;
+}
+
+@keyframes glow {
+    to {
+        text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+        color: rgba(232, 69, 69, .8)
+    }
+}
+
+.titleGlow {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* hoverlink animations *************************************************/
+
 a {
-    color:white;
+    color: #FFFFFF;
     display: inline;
-    border-bottom: .2vw solid white;
+    border-bottom: .2vw solid rgba(255, 255, 255, .5);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.55vw;
+  
 }
 
 a.shadow:hover {
