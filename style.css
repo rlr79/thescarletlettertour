@@ -169,6 +169,7 @@ p{ /* The words and spacing between groups of text */
           transform: translateZ(-250px) scale(3.5);
 }
 
+
 .parallax__layer__2 {
   -webkit-transform: translateZ(-200px) scale(3.1);
           transform: translateZ(-200px) scale(3.1);
@@ -215,14 +216,23 @@ p{ /* The words and spacing between groups of text */
 
 
 
+
 /* parallax intro paragraph *******************************************************/
 
 
+.paragraph1Title {
+        font-family: 'Special Elite', cursive;
+        color: #fff;
+        font-size: 4vw;
+margin-left: 8%;
+
+    margin-bottom: 3%;
+}
 .introductionParagraph1 {
     margin-top: 300% /* moves the red box of into words up and down */
     position: absolute;
     width: 40vw;
-    height: 46vw;
+    height: 43vw;
     line-height: 3vw;
 -webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
 box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
@@ -233,86 +243,40 @@ box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
 }
 
 a {
-    color: #fff;
-    font-size: 1.7vw;
-    text-decoration: none;
+    color:white;
+    display: inline;
     border-bottom: .2vw solid white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8vw;
 }
 
-.highlight1 {
-    display: inline-block;
-    text-indent: -5px;
+a.shadow:hover {
+
+    background-color: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowingText .8s infinite alternate;
+
 }
 
-.highlight1 .highlight {
-  text-decoration: none;
-  position: relative;
-  z-index: 0;
-}
+@keyframes glowingText {
+  from {
+    opacity: 1;
+  }
 
-.highlight1 .highlight::after {
-  position: absolute;
-  z-index: -1;
-  bottom: .1vw;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  width: 80%;
-  height: 0vw;
-  background-color: #202020;
-  transition: all 250ms;
+  to {
+    opacity: .7;
+  }
 }
-.highlight1 .highlight:hover {
-  color: white;
-  text-shadow: 0px 1px 0px black;
-}
-.highlight1 .highlight:hover::after {
-  height: 150%;
-  width: 110%;
-}
-
-.highlight2 {
-    display: inline-block;
-    
-}
-
-.highlight2 .highlight {
-  text-decoration: none;
-  position: relative;
-  z-index: 0;
-}
-
-.highlight2 .highlight::after {
-  position: absolute;
-  z-index: -1;
-  bottom: .1vw;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  width: 80%;
-  height: 0vw;
-  background-color: #202020;
-  transition: all 250ms;
-}
-.highlight2 .highlight:hover {
-  color: white;
-  text-shadow: 0px 1px 0px black;
-}
-.highlight2 .highlight:hover::after {
-  height: 150%;
-  width: 115%;
-}
-
-
 
 
 
 .introductionParagraph2 {
-    margin-top:  -130%;
     margin-left: 10%;
     position: absolute;
     width: 40vw;
-    height: 50vw;
+    height: 43vw;
     line-height: 3vw;
 -webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
 box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
@@ -325,9 +289,10 @@ box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
 .paragraph2Title {
         font-family: 'Special Elite', cursive;
         color: #fff;
-        margin-bottom: 2vw;
-        font-size: 2vw;
-    text-align: center;
+        font-size: 4vw;
+margin-left: 10%;
+margin-top: -130%;
+    margin-bottom: 3%;
 }
 
 .introductionWords {
@@ -342,29 +307,37 @@ box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
 
 
 
+
+
 /* Setting Words ******************/ 
 
 .settingSection { 
     position: absolute;
-    margin-top: -43%;
-    margin-left: 20%;
+    margin-top: 130%;
     font-family: 'Special Elite', cursive;
     font-size: 1.7vw;
+    width: 100%;
 }
 
 .setting{
-    margin-left: -25%;
+    margin-left: 15%;
+    margin-top: -46%;
     margin-bottom: -1%;
     font-size: 2.4vw;
-    font-family: 'Special Elite', cursive;
+}
+
+.settingWords {
+    margin-left: 25%;
 }
 
 .scrollDown {
+    margin-left: 15%;
     margin-top: 4%;
     color: #e84545;
     font-weight: 500;
     font-size: 1.9vw;
 }
+
 
 
 /* Parallax Cover *******************/
