@@ -361,12 +361,21 @@ margin-top: -130%;
     margin-left: 25%;
 }
 
+
 .scrollDown {
-    margin-left: 15%;
-    margin-top: 4%;
+    animation: glow 1s infinite alternate;
+        margin-left: 15%;
+    margin-bottom: 20%;
     color: #e84545;
     font-weight: 500;
     font-size: 1.9vw;
+}
+
+@keyframes glow {
+    to {
+        text-shadow: 0 0 1vw rgba(255, 255, 255,.8);
+        color: rgba(232, 69, 69, .8)
+    }
 }
 
 
