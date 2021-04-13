@@ -496,7 +496,6 @@ a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white
 }
 
 section { /* individual sections */
-  border-top: 2px solid #c2c2c2;
   padding: 3%;
   font-size: 16px;
   font-weight: 200;
@@ -510,7 +509,7 @@ h1 {
     color: #53354a;
     position: relative;
     font-family: 'Special Elite', cursive;
-    word-spacing: 100vw; /* makes each wod start on a new line */
+
     text-align: center; 
 }
 h1:after {
@@ -519,7 +518,7 @@ margin-top: 3%;
   content: "";
   display: block;
     border-top: 1px solid #464c63;
-  width: 40%;
+  width: 90%;
 }
 
 
