@@ -22,6 +22,80 @@ p{ /* The words and spacing between groups of text */
 }
 
 
+/* the scrolling menu *************************************************/
+.timeline { 
+  margin: 0;     
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  left: 5%;
+  top: 5%;
+  width: 1px;
+  height: 90%;
+  background: #464c63;
+    z-index: 0;
+}
+.timeline .bar {    /* the scrolling yellow bar */
+  position: absolute;
+  width: 1px;
+  background-color: #e84545;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.container { /* all the sections */
+  padding-left: 200px;
+    margin-top: 150%;  /* what moves the sections section up and down */
+    position:absolute;
+}
+
+section { /* individual sections */
+  border-top: 2px solid #fcf769;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 200;
+  font-family: 'Roboto Slab', serif;
+}
+
+.node {
+  position: absolute;
+  width: .3vw;
+  height: .4vw;
+  background: #FFF;
+  left: -1px;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.node:hover {
+  background: #e84545;
+}
+.node:hover span {
+  opacity: 1;
+}
+.node:before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: -3px;
+  top: -3px;
+}
+.node span {
+  transition: all 0.4s ease-out;
+  text-transform: uppercase;
+  right: 4px;
+  top: -16px;
+  color: #FFFFFF;
+  position: absolute;
+  padding: 10px;
+  white-space: nowrap;
+  font-size: 1.6vw;     
+  font-weight: 200;
+  font-family: "Montserrat";
+  opacity: 0;
+}
 
 
 /* stagnant title, author, and publication information ***********************/
@@ -301,8 +375,6 @@ a.shadow:hover {
   }
 }
 
-
-
 .introductionParagraph2 {
     margin-left: 10%;
     position: absolute;
@@ -338,13 +410,11 @@ margin-top: -130%;
 
 
 
-
-
 /* Setting Words ******************/ 
 
 .settingSection { 
     position: absolute;
-    margin-top: 130%;
+    margin-top: 180%;  /*  this pushes down all the bottom section with the setting details */
     font-family: 'Special Elite', cursive;
     font-size: 1.7vw;
     width: 100%;
@@ -352,7 +422,7 @@ margin-top: -130%;
 
 .setting{
     margin-left: 15%;
-    margin-top: -46%;
+    margin-top: -50%;
     margin-bottom: -1%;
     font-size: 2.4vw;
 }
@@ -363,8 +433,9 @@ margin-top: -130%;
 
 
 .scrollDown {
-    animation: glow 1s infinite alternate;
-        margin-left: 15%;
+    animation: glow 1.5s infinite alternate;
+    margin-left: 15%;
+    margin-top: 2%;
     margin-bottom: 20%;
     color: #e84545;
     font-weight: 500;
@@ -380,6 +451,10 @@ margin-top: -130%;
 
 
 
+.salemPhoto {
+    position: absolute;
+}
+
 /* Parallax Cover *******************/
 
 .parallax__cover {
@@ -387,7 +462,7 @@ margin-top: -130%;
     display: block;
     position: absolute;
     width: 100%;
-    height: 80vw;  /* what pushes down the top banner */
+    height: 200vw;  /* what pushes down the top banner */
     top: 100%; /*What moves the cover from visible to not, and seperates it from the city divider*/
 }
 
@@ -397,7 +472,10 @@ margin-top: -130%;
 
 
 
-/* Timeline *****************************/
+.container {
+    background-color: black;
+    margin-top: 70%;   /* moves the sect5ions section up and down from the final parallax photo */
+}
 
 
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700");
@@ -443,79 +521,6 @@ h2 {
   position: relative;
 }
 
-
-.timeline { /* the scrolling menu */
-  margin: 0;     
-  padding: 0;
-  list-style: none;
-  position: fixed;
-  left: 5%;
-  top: 5%;
-  width: 1px;
-  height: 90%;
-  background: #464c63;
-}
-.timeline .bar {    /* the scrolling yellow bar */
-  position: absolute;
-  width: 1px;
-  background-color: #e84545;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.container { /* all the sections */
-  padding-left: 200px;
-    margin-top: 150%;  /* what moves the sections section up and down */
-    position:absolute;
-}
-
-section { /* individual sections */
-  border-top: 2px solid #fcf769;
-  padding: 20px;
-  font-size: 16px;
-  font-weight: 200;
-  font-family: 'Roboto Slab', serif;
-}
-
-.node {
-  position: absolute;
-  width: .3vw;
-  height: .4vw;
-  background: #FFF;
-  left: -1px;
-  z-index: 1;
-  cursor: pointer;
-  border-radius: 3px;
-}
-.node:hover {
-  background: #e84545;
-}
-.node:hover span {
-  opacity: 1;
-}
-.node:before {
-  content: "";
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  left: -3px;
-  top: -3px;
-}
-.node span {
-  transition: all 0.4s ease-out;
-  text-transform: uppercase;
-  right: 4px;
-  top: -16px;
-  color: #FFFFFF;
-  position: absolute;
-  padding: 10px;
-  white-space: nowrap;
-  font-size: 1.6vw;     
-  font-weight: 200;
-  font-family: "Montserrat";
-  opacity: 0;
-}
 
 
 
