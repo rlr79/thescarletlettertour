@@ -4,6 +4,7 @@
 
 
 body {
+    min-width: 1800px;
     height: 50%;
     width: 100%;
     background: #202030;
@@ -19,6 +20,7 @@ p{ /* The words and spacing between groups of text */
     text-indent: 30px;
     font-family: 'Roboto Slab', serif;
     line-height: 2vw;
+    text-align: justify;
 }
 
 
@@ -44,19 +46,6 @@ p{ /* The words and spacing between groups of text */
   z-index: 0;
 }
 
-.container { /* all the sections */
-  padding-left: 200px;
-    margin-top: 150%;  /* what moves the sections section up and down */
-    position:absolute;
-}
-
-section { /* individual sections */
-  border-top: 2px solid #fcf769;
-  padding: 20px;
-  font-size: 16px;
-  font-weight: 200;
-  font-family: 'Roboto Slab', serif;
-}
 
 .node {
   position: absolute;
@@ -298,8 +287,7 @@ section { /* individual sections */
         font-family: 'Special Elite', cursive;
         color: #fff;
         font-size: 4vw;
-margin-left: 8%;
-
+    margin-left: 8%;
     margin-bottom: 3%;
 }
 .introductionParagraph1 {
@@ -472,10 +460,9 @@ margin-top: -130%;
 
 
 
-.container {
-    background-color: black;
-    margin-top: 70%;   /* moves the sect5ions section up and down from the final parallax photo */
-}
+
+
+
 
 
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700");
@@ -500,27 +487,58 @@ a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white
 } */
 
 
+.container { /* all the sections */
+    padding-left: 200px;
+    margin-top: 69.5%;  /* what moves the sections section up and down */
+    position:absolute;
+    background-color: #0c0c0c;
+    margin-left: -8%;
+}
+
+section { /* individual sections */
+  border-top: 2px solid #c2c2c2;
+  padding: 3%;
+  font-size: 16px;
+  font-weight: 200;
+  font-family: 'Roboto Slab', serif;
+    margin-top: 5%;
+}
+
 h1 {
-  font-size: 56px;
-  font-weight: 400;
-  color: #7045ff;
-  position: relative;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #53354a;
+    position: relative;
+    font-family: 'Special Elite', cursive;
+    word-spacing: 100vw; /* makes each wod start on a new line */
+    text-align: center; 
 }
 h1:after {
+margin-top: 3%;
+    margin-left: 4%;
   content: "";
-  padding-bottom: 30px;
   display: block;
-  border-bottom: 1px solid #464c63;
-  width: 60%;
+    border-top: 1px solid #464c63;
+  width: 40%;
 }
+
 
 h2 {
   font-size: 36px;
   font-weight: 100;
-  color: #83ffe1;
+  color: #903749;
   position: relative;
+    text-align: center;
 }
 
+.map {
+    float: right;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    width: 50%;
+    filter: brightness(20%);
+}
 
 
 
