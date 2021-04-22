@@ -243,13 +243,19 @@ p{ /* The words and spacing between groups of text */
     margin-left: 23%;
 }
 
+.fullBackground {
+    width: 50%;
+}
+
 .parallax__layer__3 {
     -webkit-transform: translateZ(-150px) scale(2.5);
             transform: translateZ(-150px) scale(2.5);
     margin-left: 20%;
     margin-top: 0%;
+}
 
-
+.scaffolding {
+    width: 50%
 }
 
 .parallax__layer__4 {
@@ -257,7 +263,10 @@ p{ /* The words and spacing between groups of text */
             transform: translateZ(-125px) scale(2);
     margin-left: 15%;
     margin-top: -7%;
+}
 
+.group {
+    width: 45%;
 }
 
 .parallax__layer__5 {
@@ -462,6 +471,8 @@ a.shadow:hover {
 
 .salemPhoto {
     position: absolute;
+    width: 100%;
+    margin-left: 0%;
 }
 
 
