@@ -614,7 +614,7 @@ h1:after {
     
     .container { /* all the sections */
 
-        margin-top: 150%;  /* what moves the sections section up and down */
+        margin-top: 145%;  /* what moves the sections section up and down */
         margin-left: -2%;
         padding-left: 0%;
     }
