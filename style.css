@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"); /* Author/Introduction (typewriter/printing press) font */
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded&display=swap"); /* Paragraph font */
 
-
+html {
+    overflow-x: hidden;
+}
 
 body {
     margin: 0;  /* HTML body has a margin of 8px by default. This removes the extra spaces on the sides */
