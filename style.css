@@ -595,214 +595,211 @@ h1:after {
 
 
 /* Smaller Screens ****************************************************************/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     
     
 
     
-p{ /* The words and spacing between groups of text */
-    margin-top: 1vw;
-    font-size: 2.5vw;
-    text-indent: 30px;
-    line-height: 3vw;
-}
+    p{ /* The words and spacing between groups of text */
+        margin-top: 1vw;
+        font-size: 2.5vw;
+        text-indent: 30px;
+        line-height: 3vw;
+    }
     
-.parallax {
-    height: 85%;    /* The size/length of the Parallax window ITSELF, including where the town/border will end, as in how far up/down it will go */
-}
+    .parallax {
+        height: 85%;    /* The size/length of the Parallax window ITSELF, including where the town/border will end, as in how far up/down it will go */
+    }
     
-.container { /* all the sections */
+    .container { /* all the sections */
 
-    margin-top: 120%;  /* what moves the sections section up and down */
-    margin-left: -2%;
-    padding-left: 0%;
-}
+        margin-top: 113%;  /* what moves the sections section up and down */
+        margin-left: -2%;
+        padding-left: 0%;
+    }
 
 
 
 /* stagnant title *******************************************************/
 
 
-.title {
-    top: 0%;
-    font-size: 7vw;
-    color: #e84545;
-    position:relative;
-    left: 0%;
-    padding: 2%;
-    text-align: center;
-    background-color: rgba(22,25,37, .5);
-    width: 100%;
-}
+    .title {
+        top: 0%;
+        font-size: 7vw;
+        color: #e84545;
+        position:relative;
+        left: 0%;
+        padding: 2%;
+        text-align: center;
+        background-color: rgba(22,25,37, .5);
+        width: 100%;
+    }
     
-.title-word {
-    word-spacing:normal;
-    
-}
+    .title-word {
+        word-spacing:normal;  
+    }
 
-.author {
-    font-size: 3vw;
-    font-family: 'Special Elite', cursive;
-    margin-top: 0%;
-    margin-left: 0%;
-    color: #903749;
-}
+    .author {
+        font-size: 3vw;
+        font-family: 'Special Elite', cursive;
+        margin-top: 0%;
+        margin-left: 0%;
+        color: #903749;
+    }
     
     
     
-    
+/* Parallax *******************************************************/
     
     
     
     .parallax__layer__2 {
-    -webkit-transform: translateZ(-200px) scale(3.1);
-            transform: translateZ(-200px) scale(3.1);
-    margin-top: 180%;
-    margin-left: 30%;
-}
+        -webkit-transform: translateZ(-200px) scale(3.1);
+                transform: translateZ(-200px) scale(3.1);
+        margin-top: 180%;
+        margin-left: 30%;
+    }
 
-.fullBackground {
-    width: 92%;
-}
+    .fullBackground {
+        width: 92%;
+    }
 
-.parallax__layer__3 {
-    -webkit-transform: translateZ(-150px) scale(2.5);
-            transform: translateZ(-150px) scale(2.5);
-    margin-left: 27%;
-    margin-top: 50%;
-}
+    .parallax__layer__3 {
+        -webkit-transform: translateZ(-150px) scale(2.5);
+                transform: translateZ(-150px) scale(2.5);
+        margin-left: 27%;
+        margin-top: 50%;
+    }
 
-.scaffolding {
-    width: 91%
-}
+    .scaffolding {
+        width: 91%
+    }
 
-.parallax__layer__4 {
-    -webkit-transform: translateZ(-125px) scale(2);
-            transform: translateZ(-125px) scale(2);
-    margin-left: 35%;
-    margin-top: -13%;
-}
+    .parallax__layer__4 {
+        -webkit-transform: translateZ(-125px) scale(2);
+                transform: translateZ(-125px) scale(2);
+        margin-left: 35%;
+        margin-top: -13%;
+    }
 
-.group {
-    width: 90%;
-}
+    .group {
+        width: 90%;
+    }
 
-.parallax__layer__5 {
-    -webkit-transform: translateZ(-50px) scale(1.5);
-            transform: translateZ(-50px) scale(1.5);
-    margin-left: 10%;
-    margin-top: 250%;
-}
+    .parallax__layer__5 {
+        -webkit-transform: translateZ(-50px) scale(1.5);
+                transform: translateZ(-50px) scale(1.5);
+        margin-left: 10%;
+        margin-top: 250%;
+    }
 
-.parallax__layer__6 {
-    -webkit-transform: translateZ(0px) scale(1);
-            transform: translateZ(0px) scale(1);
-    margin-left: 0%;
-    margin-top: 180%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
-}
+    .parallax__layer__6 {
+        -webkit-transform: translateZ(0px) scale(1);
+                transform: translateZ(0px) scale(1);
+        margin-left: 0%;
+        margin-top: 180%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
+    }
 
 
     
 /* parallax intro paragraphs *******************************************************/
-    .introductionWords {
-    text-indent: 30px;
-    font-size: 3vw;
-    line-height: 4vw;
-    text-align: justify;
-    font-family: 'Special Elite', cursive;
-    color: #fff;
-    margin-bottom: 2vw;
+        .introductionWords {
+        text-indent: 30px;
+        font-size: 3vw;
+        line-height: 4vw;
+        text-align: justify;
+        font-family: 'Special Elite', cursive;
+        color: #fff;
+        margin-bottom: 2vw;
         overflow: hidden;
-}
+    }
 
-.paragraph1Title {
-    font-size: 6vw;
-    margin-left: 25%;
-    margin-top: 350%;
-    margin-bottom: 5%;
-}
+    .paragraph1Title {
+        font-size: 6vw;
+        margin-left: 25%;
+        margin-top: 350%;
+        margin-bottom: 5%;
+    }
     
     
 
-.introductionParagraph1 {
-    margin-top: 0%; /* moves the red box of into words up and down */
-    height: 69vw;
-    width: 60vw;
-    line-height: 3vw;
-    margin-left: 12%;
-    padding: 6%;
-    overflow: hidden;
-}
+    .introductionParagraph1 {
+        margin-top: 0%; /* moves the red box of into words up and down */
+        height: 69vw;
+        width: 60vw;
+        line-height: 3vw;
+        margin-left: 12%;
+        padding: 6%;
+        overflow: hidden;
+    }
     
-    .titleGlow {
-    font-size: 4vw;
-    font-weight: bold;
-}
+        .titleGlow {
+        font-size: 4vw;
+        font-weight: bold;
+    }
     
-    .paragraph2Title {
-    font-size: 6vw;
-    margin-left: 18%;
-    margin-top: -60%;
-    margin-bottom: 5%;
-}
-    .introductionParagraph2 {
-    margin-left: 18%;
-    height: 69vw;
-    width: 60vw;
-    line-height: 3vw;
-    padding: 5%;
-}
+        .paragraph2Title {
+        font-size: 6vw;
+        margin-left: 18%;
+        margin-top: -60%;
+        margin-bottom: 5%;
+    }
+    
+        .introductionParagraph2 {
+        margin-left: 18%;
+        height: 69vw;
+        width: 60vw;
+        line-height: 3vw;
+        padding: 5%;
+    }
 
     
-    .parallax__layer__6 {
-    margin-top: 280%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
-}
+        .parallax__layer__6 {
+        margin-top: 280%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
+    }
 
 
 /* Setting Section ***************************************************************/ 
 
-.settingSection { 
-    position: absolute;
-    margin-top: 190%;  /*  this pushes down all the bottom section with the setting details */
-    font-family: 'Special Elite', cursive;
-    font-size: 4vw;
-    width: 100%;
-}
+    .settingSection { 
+        position: absolute;
+        margin-top: 190%;  /*  this pushes down all the bottom section with the setting details */
+        font-family: 'Special Elite', cursive;
+        font-size: 4vw;
+        width: 100%;
+    }
 
-.setting{
-    margin-left: 20%;
-    margin-top: -62%;
-    margin-bottom: -1%;
-    font-size: 4vw;
-}
+    .setting{
+        margin-left: 20%;
+        margin-top: -62%;
+        margin-bottom: -1%;
+        font-size: 4vw;
+    }
 
-.settingWords {
-    margin-left: 30%;
-}
+    .settingWords {
+        margin-left: 30%;
+    }
 
 
-.scrollDown {
-    animation: scrollGlow 1.5s infinite alternate;
-    margin-left: 13%;
-    margin-top: 5%;
-    margin-bottom: 20%;
-    color: #e84545;
-    font-weight: 500;
-    font-size: 4vw;
-}
+    .scrollDown {
+        animation: scrollGlow 1.5s infinite alternate;
+        margin-left: 13%;
+        margin-top: 5%;
+        margin-bottom: 20%;
+        color: #e84545;
+        font-weight: 500;
+        font-size: 4vw;
+    }
     
     
-    
-    
-    
-    
+ 
 /* Chapters  Section ***************************************************************/ 
 
-section { /* individual sections */
-    margin-top: 0%;
-    margin-left: 10%;
-    padding-right: 8%;
-}
+    section { /* individual sections */
+        margin-top: 0%;
+        margin-left: 10%;
+        padding-right: 8%;
+    }
 
     
 }
