@@ -102,6 +102,7 @@ p{ /* The words and spacing between groups of text */
     font-size: 6vw;
     color: #e84545;
     letter-spacing: .5vw;
+    overflow-x:hidden;
 }
 
 .title-word {
@@ -512,6 +513,7 @@ a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white
 
 
 .container { /* all the sections */
+    overflow-x:hidden;
     padding-left: 200px;
     margin-top: 69.5%;  /* what moves the sections section up and down */
     position:absolute;
@@ -596,7 +598,6 @@ h1:after {
 
 /* Smaller Screens ****************************************************************/
 @media screen and (max-width: 900px) {
-    
     
 
     
