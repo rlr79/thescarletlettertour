@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap"); /* The Scarlett Letter font */
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"); /* Author/Introduction (typewriter/printing press) font */
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded&display=swap"); /* Paragraph font */
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap"); /* Scroll Down cursive font */
 
-@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap"); /* Scroll Down font */
 
 
+
+/* general *******************************************************************/
 
 html {
     overflow-x: hidden;   /* this hides the white space on the right on cell phones */
@@ -12,12 +14,12 @@ html {
 
 body {
     margin: 0;  /* HTML body has a margin of 8px by default. This removes the extra spaces on the sides */
-    height: 50%;
+    /* height: 50%;*/
     width: 100%;
     background: #202030;
     background-image: url(sectionPhotos/BostonMap.jpg);
     overflow-x: hidden;
-    color: #fff;
+    color: #fff; /* color for all fonts by default */
 }
 
 
@@ -25,7 +27,7 @@ p{ /* The words and spacing between groups of text */
     margin-top: 1vw;
     font-size: 1.4vw;
     color: #d3d3d3;
-    text-indent: 30px;
+    text-indent: 2.5vw;
     font-family: 'Encode Sans Semi Expanded', sans-serif;
     line-height: 2vw;
     text-align: justify;
@@ -33,21 +35,19 @@ p{ /* The words and spacing between groups of text */
 
 
 
-/* the scrolling menu *************************************************/
+/* scrolling menu *******************************************************************/
 .timeline { 
-    margin: 0;     
-    padding: 0;
     list-style: none;
     position: fixed;
     left: 4%;
     top: 5%;
-    width: 6.5vw;
-    height: 85%;
+    width: 2.5vw;
+    height: 90%;
     background: rgba(255, 255, 255,.1);
     border: .1vw solid black;
     z-index: 0;
 }
-.timeline .bar {    /* the scrolling red bar */
+.timeline .bar {                            /* the scrolling red bar */
     position: absolute;
     width: 1px;    
     background-color: #e84545;
@@ -56,8 +56,7 @@ p{ /* The words and spacing between groups of text */
     z-index: 0;
 }
 
-
-.node {
+.node {                                 /* each dot */
     position: absolute;
     width: .3vw;
     height: .4vw;
@@ -70,7 +69,7 @@ p{ /* The words and spacing between groups of text */
 .node:hover {
     background: #e84545;
 }
-.node:hover span {
+.node:hover span {                      /* chapter words ("ch. 1") */
     opacity: 1;
 }
 .node:before {
@@ -82,20 +81,37 @@ p{ /* The words and spacing between groups of text */
     top: -3px;
 }
 .node span {
-    transition: all 0.4s ease-out;
-    text-transform: uppercase;
-    left: 50%;                          /* moves the node */
-    top: -16px;
+    transition: all 0.6s ease-out;
+    text-transform: uppercase;                           
+    top: -1vw;                         /* moves the chapter words up/down to align with dots */
     color: #FFFFFF;
     position: absolute;
-    padding: 10px;
+    padding: 1vw;
     white-space: nowrap;
     font-size: 1.6vw;     
-    font-weight: 200;
     font-family: 'Special Elite', cursive;
     text-shadow: 0 0 1.5vw rgba(255, 255, 255,.8);
     opacity: 0;
 }
+
+/* a.white-mode, a.white-mode:link, a.white-mode:visited, a.white-mode:active {
+  position: fixed;
+  font-family: 'Roboto Slab', serif;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  left: 40px;
+  bottom: 0px;
+  font-size: 12px;
+  text-decoration: none;
+  background: #f7f7f7;
+  padding: 4px 8px;
+  z-index: 10;
+  color: #3B425A;
+}
+a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white-mode:active:hover {
+  background: #7B46FE;
+  color: #FDFA75;
+} */
 
 
 /* stagnant title *******************************************************/
@@ -103,18 +119,17 @@ p{ /* The words and spacing between groups of text */
 
 .title {
     position: absolute;
-    top: 90px;
+    top: 10vw;
     left: 59%;
-    padding-left: 17px;
+    padding-left: 2vw;              /* moves the red line to the left of the words */
     font-weight: bold;
     font-size: 6vw;
     color: #e84545;
     letter-spacing: .5vw;
-    overflow-x:hidden;
 }
 
 .title-word {
-    word-spacing: 9999999px;
+    word-spacing: 9999999px;        /* moves each title word to another line */
 }
 
 .author {
@@ -126,10 +141,10 @@ p{ /* The words and spacing between groups of text */
 
 
 
-/* Title animation */
+/* Title animation *********************************************************************/
 
 
-/* the red line before the title *********/
+/* the red line before the title */
 .title:before {
     content: '';
     display: block;
@@ -141,11 +156,11 @@ p{ /* The words and spacing between groups of text */
     left: 0;
     opacity: 1;
     transform: translateX(-150px);
-    -webkit-animation: title-border-slide-in 0.35s ease-out forwards;
-            animation: title-border-slide-in 0.35s ease-out forwards;
+    -webkit-animation: title-border-slide-in 1s ease-out forwards;
+            animation: title-border-slide-in 1s ease-out forwards;
 }
 
-/* title animation *********/
+/* title words animation */
 .title .title-word {
     font-family: 'Ribeye Marrow', cursive;
     opacity: 0;
@@ -153,20 +168,20 @@ p{ /* The words and spacing between groups of text */
     transform: rotateX(-90deg);
 }
 .title .title-word:nth-child(1) {
-    -webkit-animation: roll-in 0.15s 0s ease-out forwards;
-            animation: roll-in 0.15s 0s ease-out forwards;
+    -webkit-animation: roll-in 1s 0s ease-out forwards;
+            animation: roll-in 1s 0s ease-out forwards;
 }
 .title .title-word:nth-child(2) {
-    -webkit-animation: roll-in 0.15s 0.175s ease-out forwards;
-            animation: roll-in 0.15s 0.175s ease-out forwards;
+    -webkit-animation: roll-in 1s 0.175s ease-out forwards;
+            animation: roll-in 1s 0.175s ease-out forwards;
 }
 .title .title-word:nth-child(3) {
-    -webkit-animation: roll-in 0.15s 0.35s ease-out forwards;
-            animation: roll-in 0.15s 0.35s ease-out forwards;
+    -webkit-animation: roll-in 1s 0.35s ease-out forwards;
+            animation: roll-in 1s 0.35s ease-out forwards;
 }
 .title .title-word:nth-child(4) {
-    -webkit-animation: roll-in 0.15s 0.525s ease-out forwards;
-            animation: roll-in 0.15s 0.525s ease-out forwards;
+    -webkit-animation: roll-in 1s 0.525s ease-out forwards;
+            animation: roll-in 1s 0.525s ease-out forwards;
 }
 @-webkit-keyframes title-border-slide-in {
     0% {
@@ -219,17 +234,16 @@ p{ /* The words and spacing between groups of text */
 .parallax {
   -webkit-perspective: 100px;
           perspective: 100px;
-    height: 70vw;    /* The size/length of the Parallax window ITSELF, including where the town/border will end, as in how far up/down it will go */
     overflow-x:hidden;
     overflow-y: auto; 
     position: absolute;
     width: 100%;
-  /*  border-bottom: 1vw solid #1a1a1a; */
+    height: 70vw;                   /* The size/length of the Parallax window ITSELF, including where the town/border will end, as in how far up/down it will go, though adding to the parallax cover affects this as well */
 }
 
 
 
-.parallax__layer img {    /* Keeps everything level horizontally */
+.parallax__layer img {              /* Keeps everything level horizontally */
     display: block;
     position: absolute;
     bottom: 0;
@@ -255,10 +269,11 @@ p{ /* The words and spacing between groups of text */
     margin-left: 30%;
 }
 
-.pictureDesctipion {
-    width: 50%;
+.pictureDesctipion {                   /* words under the parallax photo */
+    width: 44%;
     position: absolute;
     margin-top: 7%;
+    margin-left: 1%;
     font-family: 'Special Elite', cursive;
     line-height: 2vw;
     font-size: 1.2vw;
@@ -301,7 +316,7 @@ p{ /* The words and spacing between groups of text */
     -webkit-transform: translateZ(0px) scale(1);
             transform: translateZ(0px) scale(1);
     margin-left: 0%;
-    margin-top: 180%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
+    margin-top: 180%; /* Puts space between final layer of parallax photo, and the introduction paragraphs/final salem photo */
 }
 
 
@@ -315,16 +330,26 @@ p{ /* The words and spacing between groups of text */
 /* parallax intro paragraphs *******************************************************/
 
 
-.paragraph1Title {
+.introductionWords {                        /* the words within both intro boxes */
+    text-indent: 30px;
+    font-size: 1.6vw;
+    text-align: justify;
     font-family: 'Special Elite', cursive;
     color: #fff;
+    margin-bottom: 1vw
+}
+
+.paragraph1Title {
+    font-family: 'Special Elite', cursive;
+    color: #ffffff;
     font-size: 3.5vw;
     margin-left: 14%;
     margin-top: -30%;
     margin-bottom: 3%;
 }
+
 .introductionParagraph1 {
-    margin-top: -0%; /* moves the red box of into words up and down */
+    margin-top: -0%;                        /* moves "about the novel" up and down */
     margin-left: 7%;
     position: absolute;
     width: 35vw;
@@ -339,9 +364,36 @@ p{ /* The words and spacing between groups of text */
 }
 
 
+/* second paragraph */
+.paragraph2Title {
+    font-family: 'Special Elite', cursive;
+    color: #fff;
+    font-size: 3.5vw;
+    margin-left: 14%;
+    margin-top: -60%;
+    margin-bottom: 3%;
+}
 
-    .scrollDown2 {
-        animation: scrollGlow2 1.2s infinite alternate;
+.introductionParagraph2 {
+    margin-left: 14%;
+    position: absolute;
+    width: 35vw;
+    height: 41vw;
+    line-height: 2.9vw;
+    -webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
+    box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
+    -moz-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
+    padding: 3vw;
+    background-image: url(sectionPhotos/redFabric.jpg);
+    overflow-y: auto;  
+}
+
+
+
+/* scroll down cursive animation */
+
+.scrollDownCursive {
+        animation: scrollGlowCursive 1.2s infinite alternate;
         font-family: 'Homemade Apple', cursive;
         margin-bottom: 1vw;
         margin-left: 2.4vw;
@@ -350,7 +402,7 @@ p{ /* The words and spacing between groups of text */
         text-align: center;
     }
     
-    @keyframes scrollGlow2 {
+@keyframes scrollGlowCursive {
     from {
         color: #ffffff;
         text-shadow: 0 0 1.5vw rgba(255, 255, 255,.6);
@@ -362,20 +414,7 @@ p{ /* The words and spacing between groups of text */
 }
 
 
-
-
-
-.introductionWords {
-    text-indent: 30px;
-    font-size: 1.6vw;
-    text-align: justify;
-    font-family: 'Special Elite', cursive;
-    color: #fff;
-    margin-bottom: 1vw
-}
-
-
-/* Title glowing words animation */
+/* "The Scarlet Letter" glowing animation within paragraphs */
 
 
 .titleGlow {
@@ -407,7 +446,7 @@ p{ /* The words and spacing between groups of text */
 
 
 
-/* hoverlink animations */
+/* hoverlink animations within paragraphs */
 
 a {
     color: #FFFFFF;
@@ -419,14 +458,12 @@ a {
 
 
 a.shadow:hover {
-
     background-color: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: glowingText .8s infinite alternate;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-
+    animation-iteration-count: 1;           /* makes the animation play once then hold */
+    animation-fill-mode: forwards;          /* makes the animation not retreat back */
 }
 
 @keyframes glowingText {
@@ -438,43 +475,11 @@ a.shadow:hover {
     }
 }
 
-.introductionParagraph2 {
-    margin-left: 14%;
-    position: absolute;
-    width: 35vw;
-    height: 41vw;
-    line-height: 2.9vw;
-    -webkit-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60); 
-    box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
-    -moz-box-shadow: 0px 0px 50px 25px rgba(0,0,0,0.60);
-    padding: 3vw;
-    background-image: url(sectionPhotos/redFabric.jpg);
-    overflow-y: auto;  
-}
-
-.paragraph2Title {
-    font-family: 'Special Elite', cursive;
-    color: #fff;
-    font-size: 3.5vw;
-    margin-left: 14%;
-    margin-top: -60%;
-    margin-bottom: 3%;
-}
 
 
+/* Setting Section words above final Salem photo ********************************************/ 
 
-
-
-
-
-
-
-
-
-
-
-/* Setting Section ***************************************************************/ 
-
+/* the whole group */
 .settingSection { 
     position: absolute;
     margin-top: 130%;  /*  this pushes down all the bottom section with the setting details */
@@ -483,6 +488,7 @@ a.shadow:hover {
     width: 100%;
 }
 
+/* just the word "setting" */
 .setting{
     margin-left: 12%;
     margin-top: -42%;
@@ -490,13 +496,14 @@ a.shadow:hover {
     font-size: 2.4vw;
 }
 
+/* the words "Boston, MA - 1642-1649 C.E." */
 .settingWords {
     margin-left: 20%;
 }
 
-
-.scrollDown {
-    animation: scrollGlow 1.5s infinite alternate;
+/* left menu animated words */
+.useMenuWords {
+    animation: useMenuWords 1.5s infinite alternate;
     margin-left: 15%;
     margin-top: 2%;
     margin-bottom: 20%;
@@ -505,7 +512,7 @@ a.shadow:hover {
     font-size: 1.9vw;
 }
 
-@keyframes scrollGlow {
+@keyframes useMenuWords {
     from {
         color: #ffffff;
     }
@@ -516,7 +523,7 @@ a.shadow:hover {
 }
 
 
-
+/* final Salem photo in parallax */
 .salemPhoto {
     position: absolute;
     width: 100%;
@@ -528,7 +535,7 @@ a.shadow:hover {
 
 
 
-
+/* black section under salem photo */
 .parallax__cover {
     background: #000000;
     display: block;
@@ -542,39 +549,20 @@ a.shadow:hover {
 
 
 
-/* Chapters Section ***************************************************************/ 
+/* Chapters Section *************************************************************************/ 
 
-/* a.white-mode, a.white-mode:link, a.white-mode:visited, a.white-mode:active {
-  position: fixed;
-  font-family: 'Roboto Slab', serif;
-  transform: rotate(-90deg);
-  transform-origin: 0 0;
-  left: 40px;
-  bottom: 0px;
-  font-size: 12px;
-  text-decoration: none;
-  background: #f7f7f7;
-  padding: 4px 8px;
-  z-index: 10;
-  color: #3B425A;
-}
-a.white-mode:hover, a.white-mode:link:hover, a.white-mode:visited:hover, a.white-mode:active:hover {
-  background: #7B46FE;
-  color: #FDFA75;
-} */
-
-
-.container { /* all the sections */
+.container { /* all the sections, housed in one div */
     overflow-x:hidden;
-    padding-left: 200px;
-    margin-top: 69.5%;  /* what moves the sections section up and down */
-    position:absolute;
+    padding-left: 18vw;
+    margin-top: 69.5%;                  /* what moves the sections up and down */
+    position: absolute;
     background-color: #121212;
     background-image: url(sectionPhotos/leafyRoses.jpg);
     margin-left: -8%;
 }
 
-section { /* individual sections */
+/* individual sections */
+section { 
     padding: 3%;
     font-size: 16px;
     font-weight: 200;
@@ -611,6 +599,7 @@ h1:after {
     width: 90%;
 }
 
+/* individual section map divs */
 .mapSection {
     float: right;
     margin-left: 3%;
@@ -622,19 +611,30 @@ h1:after {
     text-align: justify;
 }
 
-
+/* each map itself */
 .map {
     margin-top: 3%;
     width: 100%;
 }
 
 
-.mapDescription {
-}
 
 
 
-.contact { /* The email contact information */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact { /* The email contact information, which hasn't been added yet */
     font-size: 1.1vw;
     font-weight: 250;
     letter-spacing: .1vw;
@@ -651,8 +651,7 @@ h1:after {
 /* Smaller Screens ****************************************************************/
 @media screen and (max-width: 900px) {
     
-
-    
+/* general *******************************************************/
     p{ /* The words and spacing between groups of text */
         margin-top: 1vw;
         font-size: 2.5vw;
@@ -675,111 +674,33 @@ h1:after {
 
 /* stagnant title *******************************************************/
 
-
     .title {
         top: 0%;
+        left: 0%;
         font-size: 7vw;
         color: #e84545;
         position:relative;
-        left: 0%;
         padding: 2%;
         text-align: center;
         background-color: rgba(22,25,37, .5);
-        width: 100%;
     }
     
     .title-word {
-        word-spacing:normal;  
+        word-spacing:normal;            /* Makes each word fall onto one line again */
     }
 
     .author {
         font-size: 3vw;
-        font-family: 'Special Elite', cursive;
         margin-top: 0%;
-        margin-left: 0%;
-        color: #903749;
     }
     
     
-    
-    
-    
-/* the scrolling menu *************************************************/
-.timeline { 
-    margin: 0;     
-    padding: 0;
-    list-style: none;
-    position: fixed;
-    left: 5%;
-    top: 5%;
-    width: 1px;
-    height: 85%;
-    background: #464c63;
-    z-index: 0;
-}
-.timeline .bar {    /* the scrolling red bar */
-    position: absolute;
-    width: 1px;    
-    background-color: #e84545;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-
-.node {
-    position: absolute;
-    width: .3vw;
-    height: .4vw;
-    background: #FFF;
-    left: -1px;
-    z-index: 1;
-    cursor: pointer;
-    border-radius: 3px;
-}
-.node:hover {
-    background: #e84545;
-}
-    
-.node:hover span {
-    opacity: 1;
-}
-    
-.node:active span {
-    opacity: 1;
-}
-    
-.node:before {
-    content: "";
-    position: absolute;
-    width: 9px;
-    height: 9px;
-    left: -3px;
-    top: -3px;
-}
-.node span {
-    transition: all .8s ease-out;
-    text-transform:inherit;
-    left: 50%;                          /* moves the node */
-    top: -16px;
-    color: #FFFFFF;
-    position: absolute;
-    padding: 2vw;                       /* moves the chapter hover away from the menu */
-    white-space: nowrap;
-    font-size: 3vw;     
-    font-weight: 200;
-    font-family: "Montserrat";
-    opacity: 0;
-}
     
     
 /* Parallax *******************************************************/
     
     
-    
     .parallax__layer__2 {
-        -webkit-transform: translateZ(-200px) scale(3.1);
-                transform: translateZ(-200px) scale(3.1);
         margin-top: 180%;
         margin-left: 30%;
     }
@@ -797,8 +718,6 @@ h1:after {
 }
 
     .parallax__layer__3 {
-        -webkit-transform: translateZ(-150px) scale(2.5);
-                transform: translateZ(-150px) scale(2.5);
         margin-left: 27%;
         margin-top: 50%;
     }
@@ -808,8 +727,6 @@ h1:after {
     }
 
     .parallax__layer__4 {
-        -webkit-transform: translateZ(-125px) scale(2);
-                transform: translateZ(-125px) scale(2);
         margin-left: 35%;
         margin-top: -13%;
     }
@@ -819,30 +736,20 @@ h1:after {
     }
 
     .parallax__layer__5 {
-        -webkit-transform: translateZ(-50px) scale(1.5);
-                transform: translateZ(-50px) scale(1.5);
         margin-left: 10%;
         margin-top: 400%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
     }
-
+    
     .parallax__layer__6 {
-        -webkit-transform: translateZ(0px) scale(1);
-                transform: translateZ(0px) scale(1);
-        margin-left: 0%;
+        margin-top: 280%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
     }
 
 
     
 /* parallax intro paragraphs *******************************************************/
-        .introductionWords {
-        text-indent: 30px;
+    .introductionWords {
         font-size: 3vw;
         line-height: 4vw;
-        text-align: justify;
-        font-family: 'Special Elite', cursive;
-        color: #fff;
-        margin-bottom: 2vw;
-        overflow: hidden;
     }
 
     .paragraph1Title {
@@ -851,10 +758,9 @@ h1:after {
         margin-top: 350%;
         margin-bottom: 5%;
     }
-    
 
     .introductionParagraph1 {
-        margin-top: 0%; /* moves the red box of into words up and down */
+        margin-top: 0%;                 /* moves the red box of into words up and down */
         height: 69vw;
         width: 60vw;
         line-height: 3vw;
@@ -862,20 +768,15 @@ h1:after {
         padding: 6%;
         overflow: hidden;
     }
-    
-        .titleGlow {
-        font-size: 4vw;
-        font-weight: bold;
-    }
-    
-        .paragraph2Title {
+
+    .paragraph2Title {
         font-size: 6vw;
         margin-left: 18%;
         margin-top: -60%;
         margin-bottom: 5%;
     }
     
-        .introductionParagraph2 {
+    .introductionParagraph2 {
         margin-left: 18%;
         height: 69vw;
         width: 60vw;
@@ -883,27 +784,23 @@ h1:after {
         padding: 5%;
     }
     
-        .scrollDown2 {
-        animation: scrollGlow2 1.2s infinite alternate;
-        font-family: 'Homemade Apple', cursive;
-        margin-bottom: 3vw;
-        font-size: 5vw;
+/* scroll down cursive animation */ 
+    .scrollDownCursive {
+        margin-bottom: 2vw;
+        font-size: 4vw;
     }
-
     
-        .parallax__layer__6 {
-        margin-top: 280%; /* Puts space between layer 4 of the parallax and the introduction paragraphs */
+/* "The Scarlet Letter" glowing animation within paragraphs */
+    .titleGlow {
+        font-size: 4vw;
     }
-
+    
 
 /* Setting Section ***************************************************************/ 
 
     .settingSection { 
-        position: absolute;
         margin-top: 190%;  /*  this pushes down all the bottom section with the setting details */
-        font-family: 'Special Elite', cursive;
         font-size: 4vw;
-        width: 100%;
     }
 
     .setting{
@@ -918,34 +815,57 @@ h1:after {
     }
 
 
-    .scrollDown {
+/* left menu animated words */
+    .useMenuWords {
         animation: scrollGlow 1.5s infinite alternate;
         margin-left: 13%;
         margin-top: 5%;
         margin-bottom: 20%;
         color: #e84545;
-        font-weight: 500;
         font-size: 4vw;
     }
     
+/* black section under salem photo */
     .parallax__cover {
-    background: #000000;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 15vw;  /* what pushes down the top banner */
-    margin-top: 190%;
-    border-bottom: 1vw solid #3a3a3a;
-}
+        background: #000000;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 15vw;                           /* what pushes down the top banner */
+        margin-top: 190%;
+        border-bottom: 1vw solid #3a3a3a;
+    }
 
  
 /* Chapters  Section ***************************************************************/ 
 
-    section { /* individual sections */
+/* individual sections */
+    section { 
         margin-top: 0%;
         margin-left: 15%;
         padding-right: 8%;
     }
+/* map divs including map and words */
+    .mapSection {
+        font-size: 1.8vw;
+        color: #8A8A8A;
+    }
 
+/* the scrolling menu *************************************************/
+.timeline { 
+        margin: 0;     
+        padding: 0;
+        left: 5%;
+        top: 5%;
+        width: .1vw;
+        height: 85%;
+    }
     
+.node span {
+        top: -3.5vw;
+        padding: 2vw;                       /* moves the chapter hover away from the menu */
+        font-size: 3vw;     
+        font-weight: 200;
+        font-family: "Montserrat";
+    }
 }
