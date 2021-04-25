@@ -6,6 +6,15 @@
 
 
 
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&family=Quando&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Della+Respira&family=Fjord+One&family=Quando&family=Slabo+13px&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Della+Respira&family=Fjord+One&family=Quando&family=Slabo+13px&family=Yeseva+One&display=swap');
+
+
+
+
+
 /* general *******************************************************************/
 
 html {
@@ -618,9 +627,60 @@ h1:after {
 }
 
 
+.graveTop {
+    height: 33vw;
+    width: 47vw;
+    border-radius: 100% 100% 0 0;
+    background-color: green;
+    margin-left: 20%;
+    margin-top: 10%;
+    background-image: url(sectionPhotos/Stone2.jpg);
+    border-right: .8vw solid #000000;
+    border-left: .8vw solid #000000;
+    border-top: .8vw solid #000000;
+}
 
+.graveTopPhoto {
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 95%;
+}
 
-
+.graveBottom {
+    font-size: 3.5vw;
+    text-align: center;
+    border-bottom: .8vw solid #000000;
+    border-right: .8vw solid #000000;
+    border-left: .8vw solid #000000;
+    font-weight: bold;
+    font-family: 'Quando', serif; 
+    letter-spacing: 1vw;
+    color: #000000;
+    padding-bottom: 13%;
+    padding-left: 1%;
+    margin-top: -10%;
+    height: 10vw;
+    width: 46vw;
+    background-color: #555;
+    margin-bottom: 15%;
+    margin-left: 20%;
+    background-image: url(sectionPhotos/Stone2.jpg);
+    z-index: 100;
+}
+    
+    
+    
+    
+.dot{
+  width:35px;
+  height:35px;
+  position:absolute;
+  background: url(https://image.ibb.co/kyUHab/rose.png);
+  background-size: 100% 100%;
+}
+#fallingRoses {
+    margin-top: 17%;
+}
 
 
 
@@ -868,4 +928,22 @@ h1:after {
         font-weight: 200;
         font-family: "Montserrat";
     }
+    
+.graveTop {
+    margin-left: 30%;
+    margin-top: -10%;
+}
+    
+.graveBottom {
+    margin-top: -10%;
+    margin-left: 30%;
+}
+    
+.dot{
+  width:15px;
+  height:15px;
+}
+#fallingRoses {
+    margin-top: 30%;
+}
 }
