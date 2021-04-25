@@ -104,7 +104,7 @@ p{ /* The words and spacing between groups of text */
 .title {
     position: absolute;
     top: 90px;
-    left: 58%;
+    left: 59%;
     padding-left: 17px;
     font-weight: bold;
     font-size: 6vw;
@@ -319,13 +319,13 @@ p{ /* The words and spacing between groups of text */
     font-family: 'Special Elite', cursive;
     color: #fff;
     font-size: 3.5vw;
-    margin-left: 13%;
+    margin-left: 14%;
     margin-top: -30%;
     margin-bottom: 3%;
 }
 .introductionParagraph1 {
     margin-top: -0%; /* moves the red box of into words up and down */
-    margin-left: 5%;
+    margin-left: 7%;
     position: absolute;
     width: 35vw;
     height: 41vw;
@@ -439,7 +439,7 @@ a.shadow:hover {
 }
 
 .introductionParagraph2 {
-    margin-left: 13%;
+    margin-left: 14%;
     position: absolute;
     width: 35vw;
     height: 41vw;
@@ -456,7 +456,7 @@ a.shadow:hover {
     font-family: 'Special Elite', cursive;
     color: #fff;
     font-size: 3.5vw;
-    margin-left: 13%;
+    margin-left: 14%;
     margin-top: -60%;
     margin-bottom: 3%;
 }
@@ -484,7 +484,7 @@ a.shadow:hover {
 }
 
 .setting{
-    margin-left: 10%;
+    margin-left: 12%;
     margin-top: -42%;
     margin-bottom: -1%;
     font-size: 2.4vw;
