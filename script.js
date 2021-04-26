@@ -75,8 +75,8 @@ powered by GSAP : https://www.greensock.com/
 */
 
 
-var total = 30;
-var warp = document.getElementById("fallingRoses"),	w = window.innerWidth , h = "550vw";
+var total = 15;
+var warp = document.getElementById("fallingRoses"),	w = window.innerWidth , h = "675vw";
  
  for (i=0; i<total; i++){ 
    var Div = document.createElement('div');
