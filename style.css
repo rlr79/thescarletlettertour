@@ -628,11 +628,11 @@ h1:after {
 
 
 .graveTop {
-    height: 33vw;
-    width: 47vw;
+    height: 50vw;
+    width: 65vw;
     border-radius: 100% 100% 0 0;
     background-color: green;
-    margin-left: 20%;
+    margin-left: 13%;
     margin-top: 10%;
     background-image: url(sectionPhotos/Stone2.jpg);
     border-right: .8vw solid #000000;
@@ -642,12 +642,13 @@ h1:after {
 
 .graveTopPhoto {
     margin-top: 3%;
-    margin-left: 3%;
-    width: 95%;
+    margin-left: 6%;
+    width: 88%;
+    height: 45%;
 }
 
 .graveBottom {
-    font-size: 3.5vw;
+    font-size: 3.7vw;
     text-align: center;
     border-bottom: .8vw solid #000000;
     border-right: .8vw solid #000000;
@@ -656,16 +657,34 @@ h1:after {
     font-family: 'Quando', serif; 
     letter-spacing: 1vw;
     color: #000000;
-    padding-bottom: 13%;
+    padding-bottom: 15%;
     padding-left: 1%;
-    margin-top: -10%;
+    margin-top: -23%;
+    line-height: 6vw;
     height: 10vw;
-    width: 46vw;
+    width: 64vw;
     background-color: #555;
-    margin-bottom: 15%;
-    margin-left: 20%;
+    margin-left: 13%;
     background-image: url(sectionPhotos/Stone2.jpg);
     z-index: 100;
+}
+
+.letterA {
+    font-size: 6vw;
+    display: inline-block;
+}
+
+.graveDescription {
+    font-size: 1vw;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    width: 68%;
+    border: .1vw solid black;
+    margin-left: 15%;
+    margin-top: 0%;
+    padding: 2%;
+    margin-bottom: 10%;
+    color: #d3d3d3;
+    line-height: 1.5vw;
 }
     
     
@@ -679,7 +698,7 @@ h1:after {
   background-size: 100% 100%;
 }
 #fallingRoses {
-    margin-top: 17%;
+    margin-top: 20%;
 }
 
 
@@ -930,14 +949,22 @@ h1:after {
     }
     
 .graveTop {
-    margin-left: 30%;
+    margin-left: 20%;
     margin-top: -10%;
 }
     
 .graveBottom {
-    margin-top: -10%;
-    margin-left: 30%;
+    margin-top: -15%;
+    margin-left: 20%;
 }
+
+.graveDescription {
+    font-size: 2.5vw;
+    line-height: 3vw;
+    margin-left: 20%;
+    margin-top: 5%;
+    width: 62%;
+    }
     
 .dot{
   width:15px;
